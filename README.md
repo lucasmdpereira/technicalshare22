@@ -29,7 +29,7 @@
 
 <p>Dia 1: Definição da arquitetura; Configuração do ambiente; Primeiras impressões sobre MVP; Teste de controle de banco de dados com Node.js, SQlite3 e Sequelize; Problemas de lentidão na leitura e escrita dos dados; Primeira reunião com o Squad.</p>
 
-<p>Dia 2: Lentidão na leitura e escrita dos bancos de dados resolvido: Sequelize estava causando lentidão; Definido a estrutura de arquivos; Repositório criado; Trabalho com escrita e leitura do banco de dados; Aconselhamento com mentores da FCamara</p>
+<p>Dia 2: Lentidão na leitura e escrita dos bancos de dados resolvido: Sequelize estava causando lentidão; Definido a estrutura de arquivos; Repositório criado; Trabalho com escrita e leitura do banco de dados; Aconselhamento com mentores da FCamara; Rotina para cirar tabela de dados (npm run init-db);</p>
 
 <h3>📝 Licença</h3>
 <p>Este projeto está sob a licença MIT. Veja o arquivo <a href="https://github.com/lucasmdpereira/nlwtogether2020_origin/blob/main/LICENSE.md"> LICENSE </a> para mais detalhes.<p>

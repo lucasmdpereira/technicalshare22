@@ -2,7 +2,7 @@
   "name": "technicalshare",
   "version": "1.0.0",
   "description": "FCamara Hackathon april/2022",
-  "main": "src/server.js",
+  "main": "./src/server.js",
   "scripts": {
     "start": "nodemon .",
     "init-db": "node ./src/db/dbinit.js",
