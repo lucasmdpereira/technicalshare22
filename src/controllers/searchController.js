@@ -5,6 +5,6 @@ module.exports = {
     search(req, res){
         let sql
 
-        console.log(req)
+        console.log(req.params.userSearch)
     }
 }

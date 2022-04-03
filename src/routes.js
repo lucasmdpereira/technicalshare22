@@ -10,7 +10,7 @@ routes.post('/perfil/:userCredentials', loginController.authenticate)
 
 routes.get('/perfil', (req, res) => res.render("perfil"))
 
-routes.post('/search/:user', searchController.search)
+routes.post('/search/:userSearch', searchController.search)
 
 //routes.get('perfil/:perfil', (req, res) => res.render("perfil"))
 
