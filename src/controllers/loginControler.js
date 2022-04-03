@@ -12,7 +12,9 @@ module.exports = {
             if (err) return console.error(err.message)
         } )
 
-        
+        console.log(userCredentials)
+        console.log(userPassword)
+
         sql = `SELECT * FROM users WHERE email LIKE "${userCredentials}" OR name LIKE "${userCredentials}"`    
         db.all(sql,[],(err,row)=>{
         if (err) return console.error(err.message)
@@ -20,7 +22,8 @@ module.exports = {
 
         if (userPassword == row[0].password){
             console.log('Login válido')
-        } else {
+            res.render('perfil', {user: row[0].name})
+            } else {
             console.error('Login inválido')
         }
 

@@ -16,6 +16,7 @@
   <li>ejs;</li>
   <li>express;</li>
   <li>sqlite3;</li>
+  <li>path;</li>
   <li>nodemon (devDependencie).</li>
 </ul> 
 
