@@ -3,6 +3,8 @@ const path = require('path')
 
 let sql;
 
+//tudo em uma função e async
+
 const db = new sqlite3.Database(path.join(__dirname, 'users.db'), sqlite3.OPEN_READWRITE, (err) => {
     if (err) return console.error(err.message)
 } )

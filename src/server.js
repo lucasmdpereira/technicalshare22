@@ -13,4 +13,4 @@ server.use(express.urlencoded({extended: true}))  //Pq uso um midware? Funcionou
 
 server.use(routes)
 
-server.listen(3000, () => console.log("Server on"))
+server.listen(4000, () => console.log("Server on"))
