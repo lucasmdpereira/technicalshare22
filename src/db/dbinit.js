@@ -24,7 +24,7 @@ async function createTables(){
     let emails = ['pedro@ayuda', 'juninho@jr', 'alf@deet', 'roberta@hermes', 'michael@scott'];
     let password = ['pedro', 'juninho', 'alf', 'roberta', 'michael'];
     let alias = ['Entusiasta em educação', 'Iniciante', 'migrante', 'Profissional do RH', 'Workaholic'];
-    let tags = ['#Node.js #Java #Spring','#HTML #CSS #JavaScript','#Scrum Master','#recrutamento #gestão','#Node.js #PO']
+    let tags = ['#node.js #java #spring','#html #css #javascript','#scrum master','#recrutamento #gestao','#node.js #po']
     const campos = 5 
 
     for (let i = 0; i < campos; i++){

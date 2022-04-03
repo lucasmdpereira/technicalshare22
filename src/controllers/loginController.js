@@ -27,7 +27,7 @@ module.exports = {
         if (userPassword == row[0].password){
             console.log('Login válido')
             //res.use(`/perfil/${row[0].name}`, redirect)
-            res.render('perfil', {user: row[0].name})
+            res.render('perfil', {user: row[0].name, data: ''})
             } else {
             console.error('Login inválido')
         }
