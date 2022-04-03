@@ -2,7 +2,7 @@
   "name": "technicalshare",
   "version": "1.0.0",
   "description": "FCamara Hackathon april/2022",
-  "main": "index.js",
+  "main": "src/server.js",
   "scripts": {
     "start": "nodemon .",
     "test": "echo \"Error: no test specified\" && exit 1"
