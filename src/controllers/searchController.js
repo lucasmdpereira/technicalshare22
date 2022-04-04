@@ -13,18 +13,16 @@ module.exports = {
             if (err) return console.error(err.message)
         } )
 
-        regExrsearch = `%#${search} %`
-        sql = `SELECT ALL * FROM users WHERE tags LIKE '%${regExrsearch}%'`
+        regExrsearch = `%#%${search}%#%`
+        sql = `SELECT ALL * FROM users WHERE tags LIKE '${regExrsearch}'`
         
         db.all(sql,[],(err,row)=>{
             let userName = req.params.userName
             if (err) return console.error(err.message)
             if (row == 0) return console.error("not found")
             //res.status(404).json({erro: 'Usuário não encontrado, pro favor contacte o administrador do sistema'})
-            res.render('perfil', {user: userName, data: row[0]})
+            res.render('search', {user: userName, data: row, search: true})
             console.log(row)
         })
-
-        
     }
 }

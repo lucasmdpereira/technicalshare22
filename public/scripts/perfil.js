@@ -11,4 +11,3 @@ function formSearch(){
     form.setAttribute('action', `/search/${userName}/${userSearch}`)
 
   }
-

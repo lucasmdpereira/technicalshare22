@@ -7,15 +7,22 @@
     <title>Technical Share - FCamara</title>
 </head>
 <body>
-    <h1>Bem vindo, <span id="nameUser"><%= user %></span>.</h1>
+    <h1>Rota Search, <span id="nameUser"><%= user %></span>.</h1>
     <form id="search_form" action="#" method="POST">
         <label for="">Pesquisa: </label>
         <input type="text" id="user_search" name="userSearch">
         <button id="send_form_search">Pesquisar</button>
 
-        <p><%= data %></p>
+        <p>
+            Resultado:<br>
+            <%= data[0].name %>,
+            <%= data[0].alias %><br>
+            <%= data[0].tags %><br>
+            <%= data[0].email %>
+        </p>
 
 </body>
 
+<script src="../../scripts/perfil.js"></script>
 
 </html>
