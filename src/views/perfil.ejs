@@ -1,4 +1,83 @@
-<!DOCTYPE html>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.88.1">
+    <title>Fixed top navbar example · Bootstrap v5.1</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/navbar-fixed/">
+
+    
+
+    <!-- Bootstrap core CSS -->
+<link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <link href="../styles/navbar-top-fixed.css" rel="stylesheet">
+  </head>
+  <body>
+    
+<nav class="navbar navbar-expand-md navbar-light fixed-top bg-warning">
+  <div class="container-fluid">
+    <div class="fcamara_logo_alt m-3"><h1 class="fcamara_logo_alt ">F</h1></div> 
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" id="teste">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav me-auto mb-md-0">
+        <li class="nav-item">
+          <spam class="h4 nav-link active text-body" aria-current="page" href="#"><span id="nameUser">Bem vindo, <%= user.name %></span></h1></a><br>
+            <spam class="h6">
+            <%= user.tags %> 
+            </spam>
+        </li>
+      </ul>
+      <form class="d-flex" id="search_form" action="#" method="POST">
+        <input class="form-control me-2" type="search" placeholder="#pesquisa" aria-label="Search"
+        id="user_search" name="userSearch">
+        <button id="send_form_search" class="btn btn-outline-dark" type="submit">Pesquisar</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+<main class="container text-center pt-5 mt-4">
+  <img src="../images/home-intro.svg" alt="">
+</main>
+
+
+    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+
+      
+  </body>
+
+  <script src="../../scripts/perfil.js"></script>
+
+</html>
+
+
+
+<!-- <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -17,4 +96,4 @@
 
 <script src="../../scripts/perfil.js"></script>
 
-</html>
+</html> -->
