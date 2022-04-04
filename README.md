@@ -1,7 +1,9 @@
 <h2>Programa de formação FCamara - Season 3 - Abril/2022 (<em>WIP</em>...)</h2>
 
-<h3>🛠️ Tecnologias</h3>
+<h3>🛠️ Tecnologias e ferramentas</h3>
 <ul>
+  <li>VS Code;</li>
+  <li>GitFlow;</li>
   <li>HTML;</li>
   <li>CSS;</li>
   <li>JavaScript;</li>
@@ -9,7 +11,8 @@
   <li>SQlite;</li>
   <li>WSL;</li>
   <li>Ubuntu Linux;</li>
-  <li>RegEx.</li>
+  <li>RegEx;</li>
+  <li>BootStrap.</li>
 </ul> 
 
 <h3>💾 Node Modules</h3>
