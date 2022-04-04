@@ -13,13 +13,14 @@
         <input type="text" id="user_search" name="userSearch">
         <button id="send_form_search">Pesquisar</button>
 
-        <p>
             Resultado:<br>
-            <%= data[0].name %>,
-            <%= data[0].alias %><br>
-            <%= data[0].tags %><br>
-            <%= data[0].email %>
-        </p>
+            <% data.forEach(data => { %>
+                <p>Usuário encontrado:</p>
+                <%= data.name %>,
+                <%= data.alias %><br>
+                <%= data.tags %><br>
+                <%= data.email %><br>
+            <% }); %>
 
 </body>
 
