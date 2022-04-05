@@ -6,6 +6,9 @@ module.exports = {
     authenticate(req, res){
         let sql
         
+        //console.log(req)
+
+
         const userCredentials = req.params.userCredentials
         const userPassword = req.body.userPassword
 
@@ -30,7 +33,7 @@ module.exports = {
             console.log('Login válido')
             //res.use(`/perfil/${row[0].name}`, redirect)
             //res.redirect(300, '/perfil')
-            res.render('perfil', {user: row[0]})
+            res.render('perfil', {page: 'user_perfil', user: row[0]})
                 
         } else {
             console.error('Login inválido')

@@ -8,9 +8,11 @@ routes.get('/', (req, res) => res.render("index"))
 
 routes.post('/perfil/:userCredentials', loginController.authenticate)
 
-routes.get('/perfil', (req, res) => res.render("perfil"))
+routes.get('/perfil', (req, res) => res.render("perfil", {page: 'user_perfil'}))
 
-routes.post('/search/:userName/:userSearch', searchController.search)
+//routes.post('/search/:userName/:userSearch', searchController.search)
+
+routes.post('/search/:userName/:userSearch/:userTags', searchController.search)
 
 //routes.get('perfil/:perfil', (req, res) => res.render("perfil"))
 

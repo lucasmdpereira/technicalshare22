@@ -1,5 +1,5 @@
 const sqlite3 = require('sqlite3').verbose();
-const { create } = require('domain');
+const { create } = require('domain'); //Olhar se precisa mesmo
 const path = require('path')
 
 createTables()
@@ -24,7 +24,7 @@ async function createTables(){
     let emails = ['pedro@ayuda', 'juninho@jr', 'alf@deet', 'roberta@hermes', 'michael@scott'];
     let password = ['pedro', 'juninho', 'alf', 'roberta', 'michael'];
     let alias = ['Entusiasta em educação', 'Iniciante', 'migrante', 'Profissional do RH', 'Workaholic'];
-    let tags = ['#node.js¢ #java¢ #spring¢','#html¢ #css¢ #javascript¢','#scrum master¢','#recrutamento¢ #gestao¢','#node.js¢ #po¢']
+    let tags = ['node.js java spring','html css javascript','scrum master','recrutamento gestao',"world's best boss node.js po"]
     const campos = 5 
 
     for (let i = 0; i < campos; i++){
@@ -32,3 +32,4 @@ async function createTables(){
         db.run(sql,[names[i],emails[i],password[i],alias[i],tags[i]])
     }
 }
+

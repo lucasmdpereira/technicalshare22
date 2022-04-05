@@ -6,14 +6,16 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.88.1">
-    <title>Fixed top navbar example · Bootstrap v5.1</title>
+    <title>Technical Share - <%= user.name %> - FCamara</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/navbar-fixed/">
 
     
 
     <!-- Bootstrap core CSS -->
-<link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/dist/css/bootstrap.min.css" rel="stylesheet">  -->
+
+
 
     <style>
       .bd-placeholder-img {
@@ -33,7 +35,9 @@
 
     
     <!-- Custom styles for this template -->
-    <link href="../styles/navbar-top-fixed.css" rel="stylesheet">
+
+    <link href="/styles/navbar-top-fixed.css" rel="stylesheet">
+
   </head>
   <body>
     
@@ -46,10 +50,8 @@
     <div class="collapse navbar-collapse" id="navbarCollapse">
       <ul class="navbar-nav me-auto mb-md-0">
         <li class="nav-item">
-          <spam class="h4 nav-link active text-body" aria-current="page" href="#"><span id="nameUser">Bem vindo, <%= user.name %></span></h1></a><br>
-            <spam class="h6">
-            <%= user.tags %> 
-            </spam>
+          <spam class="h4 nav-link active text-body">Bem vindo, <span id="nameUser"><%= user.name %></span><br>
+            <spam class="h6" id="tagsUser" id="userTags"><%= user.tags %></spam>
         </li>
       </ul>
       <form class="d-flex" id="search_form" action="#" method="POST">
@@ -62,16 +64,16 @@
 </nav>
 
 <main class="container text-center pt-5 mt-4">
-  <img src="../images/home-intro.svg" alt="">
+  <%- include(`parts/${page}`) %>
 </main>
 
 
-    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/dist/js/bootstrap.bundle.min.js"></script>
 
       
   </body>
 
-  <script src="../../scripts/perfil.js"></script>
+  <script src="/scripts/perfil.js"></script>
 
 </html>
 

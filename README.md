@@ -38,5 +38,7 @@
 
 <p>Dia 3: Versão beta do MVP concluída, features implementadas: Login, Pesquisa de usuários, e filtros por tag usando RegEx; Marcada mentoria para testes automatizados, possívelmente com Jest;Solulão de problemas com mentoria do squad da FCamara; Reunião com UX e definição das linhas gerais do front-end; Atualizada função que cria banco de dados e tabelas, o arquivo é criado automaticamente e agora há uma coluna para "tags", problemas com async await no script - necessária correção futura.</p>
 
+<p>Dia 4: Padronização de respostas do back-end; Filtro de tags com expressão regular, apresenta a resposta com pesquisas incompletas ou com letras maiúsculas; Testes manuais de interface back-end / front-end; Melhoria do front-end utilizando bootstrap (apenas para ficar mais agradável, pode mudar completamente);</p>
+
 <h3>📝 Licença</h3>
 <p>Este projeto está sob a licença MIT. Veja o arquivo <a href="https://github.com/lucasmdpereira/nlwtogether2020_origin/blob/main/LICENSE.md"> LICENSE </a> para mais detalhes.<p>
