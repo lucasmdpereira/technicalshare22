@@ -4,7 +4,7 @@
   "description": "FCamara Hackathon april/2022",
   "main": "./src/server.js",
   "scripts": {
-    "start": "nodemon .",
+    "start": "node ./src/server.js",
     "init-db": "touch ./src/db/users.db & node ./src/db/dbinit.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

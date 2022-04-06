@@ -42,5 +42,10 @@
 
 <p>Dia 5: Finalização das páginas com bootstrap; Refatoração do código, inclusive ejs; Novo método de passar as variáveis para o front-end; Estudos em Jest</p>
 
+<p>Dia 6: 
+ToDo: Teste com biblioteca ou não
+ToDo: Criptografia de senhas com bcryptjs
+</p>
+
 <h3>📝 Licença</h3>
 <p>Este projeto está sob a licença MIT. Veja o arquivo <a href="https://github.com/lucasmdpereira/nlwtogether2020_origin/blob/main/LICENSE.md"> LICENSE </a> para mais detalhes.<p>
