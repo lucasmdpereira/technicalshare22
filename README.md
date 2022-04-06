@@ -40,5 +40,7 @@
 
 <p>Dia 4: Padronização de respostas do back-end; Filtro de tags com expressão regular, apresenta a resposta com pesquisas incompletas ou com letras maiúsculas; Testes manuais de interface back-end / front-end; Melhoria do front-end utilizando bootstrap (apenas para ficar mais agradável, pode mudar completamente);</p>
 
+<p>Dia 5: Finalização das páginas com bootstrap; Refatoração do código, inclusive ejs; Novo método de passar as variáveis para o front-end; Estudos em Jest</p>
+
 <h3>📝 Licença</h3>
 <p>Este projeto está sob a licença MIT. Veja o arquivo <a href="https://github.com/lucasmdpereira/nlwtogether2020_origin/blob/main/LICENSE.md"> LICENSE </a> para mais detalhes.<p>
