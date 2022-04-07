@@ -3,10 +3,12 @@ searchButton.addEventListener("click", sendFormSearch)
 
 function sendFormSearch(){
     const userData = cacheUserInfo()
-    const userSearch = document.querySelector('#user_search').value
-    
+    let userSearch = document.querySelector('#user_search').value
+    if(!userSearch) userSearch  = 'all'
+  
     const form = document.querySelector('#search_form')
-    form.setAttribute('action', `/search/${userData.name}/${userSearch}/${userData.tags}`)
+          form.setAttribute('action', `/search/${userData.name}/${userSearch}/${userData.tags}`)
+          form.setAttribute('method', 'POST')
   }
 
   function cacheUserInfo(){

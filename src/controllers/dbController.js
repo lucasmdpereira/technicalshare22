@@ -26,8 +26,9 @@ module.exports = {
     })},
 
     searchTagInDataBase(db, search, user, res){
-        const sql = `SELECT ALL * FROM users WHERE tags LIKE '%${search}%'`
-        
+        let sql
+        if  (search == 'all') {sql= `SELECT ALL * FROM users`}
+            else    {sql = `SELECT ALL * FROM users WHERE tags LIKE '%${search}%'`}
         db.all(sql,[],(err,row)=>{
             let erro
             let searchFound
