@@ -18,7 +18,7 @@ module.exports = {
             if (row != 0){
                 if (unauthenticatedUser.password == row[0].password){
                     console.log("100: Usuário autenticado")
-                    renderController.renderPerfilPage(true, row, res, false)
+                    renderController.renderPerfilPage(true, row, res)
                 }   else {erro= "401: Senha não confere"}
             }       else{erro= '404: Usuário não encontrado'}
                     if (err){erro= '400:' + err}

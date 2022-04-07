@@ -12,6 +12,7 @@
   <li>WSL;</li>
   <li>Ubuntu Linux;</li>
   <li>RegEx;</li>
+  <li>AWS EC2;</li>
   <li>BootStrap.</li>
 </ul> 
 
@@ -42,8 +43,7 @@
 
 <p>Dia 5: Finalização das páginas com bootstrap; Refatoração do código, inclusive ejs; Novo método de passar as variáveis para o front-end; Estudos em Jest</p>
 
-<p>Dia 6: 
-ToDo: Teste com biblioteca ou não
+<p>Dia 6: Integração a AWS; Refatoração e teste de funções com jest;
 ToDo: Criptografia de senhas com bcryptjs
 </p>
 

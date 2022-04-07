@@ -4,8 +4,7 @@ module.exports = {
         if (userAndPasswordCorrect == true){
             res.render('perfil', {page: 'user_perfil', user: row[0]})
             } else {
-            console.log('Não autenticado')
-            res.render('index', {alert: true})
+            res.render('loginerror')
         }
     },
     renderSearchPage(user, searchFound, row, res){
