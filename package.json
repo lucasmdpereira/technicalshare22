@@ -4,18 +4,29 @@
   "description": "FCamara Hackathon april/2022",
   "main": "./src/server.js",
   "scripts": {
-    "start": "node ./src/server.js",
-    "init-db": "touch ./src/db/users.db & node ./src/db/dbinit.js",
+    "start": "nodemon ./src/server.js",
+    "dbinit": "rm ./src/db/db.sqlite & node ./src/db/createDB.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Lucas Pereira",
   "license": "MIT",
   "dependencies": {
+    "aa-sqlite": "^1.0.29",
     "ejs": "^3.1.6",
     "express": "^4.17.3",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.18.0",
     "sqlite3": "^5.0.2"
   },
   "devDependencies": {
     "nodemon": "^2.0.15"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lucasmdpereira/technicalshare22.git"
+  },
+  "bugs": {
+    "url": "https://github.com/lucasmdpereira/technicalshare22/issues"
+  },
+  "homepage": "http://ec2-18-230-122-23.sa-east-1.compute.amazonaws.com/"
 }

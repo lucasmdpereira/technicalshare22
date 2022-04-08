@@ -1,22 +1,31 @@
-const dbController = require('./dbController');
+const dbController = require('./dbController')
+const renderController = require('./renderController')
 
 module.exports = {
-    search(req, res){
+    async search(req, res){
 
-        const search = req.params.userSearch.toLowerCase()
-        const db = dbController.awakenDatabase()
         const user = cacheUserInfo(req); 
+        
+        let search = req.params.userSearch.toLowerCase()
+        search = await dbController.searchTagInDataBase(search)
 
-        dbController.searchTagInDataBase(db, search, user, res)
-            
-    }
+        //console.log(search)
+        if (search.length != 0){
+             searchFound = true
+             renderController.renderSearchPage(user, searchFound, search, res) 
+        }   else{
+             searchFound = false
+             renderController.renderSearchPage(user, searchFound, search, res) 
+        }
 }
+}
+
 
 function cacheUserInfo(req){
     const user = {}
 
     user.name = req.params.userName
-    user.tags = req.params.userTags
+    user.email = req.params.userEmail
 
     return user
 }

@@ -1,21 +1,34 @@
 const dbControler = require('./dbController')
+const renderController = require('./renderController')
 
 module.exports = {
-    authenticate(req, res){    
-        const unauthenticatedUser = getUserCredentials(req)
-        const db = dbControler.awakenDatabase()
+    async authenticate(req, res){    
+        const unauthenticatedUser = getUserCredentials(req, res)
+        //console.log(unauthenticatedUser)
         
-        console.log(unauthenticatedUser)
-
-        dbControler.userCredentialsAuthenticate(db,unauthenticatedUser, res)   
+        if(unauthenticatedUser.email == 'blank') {
+            renderController.renderPerfilPage(false, 0, res)
+        }   else{
+                const dbUserCredentials = await dbControler.queryUserDBCredentials(unauthenticatedUser.email) 
+                if (dbUserCredentials.password == unauthenticatedUser.password){
+                    console.log("100: Usuário autenticado")
+                    renderController.renderPerfilPage(true, dbUserCredentials, res)
+                }   else{
+                    console.log("404: Not found")
+                    renderController.renderPerfilPage(false, 0, res)
+                }
+            }
+        //console.log('dbUserEmail: ' + dbUser.email)
+        //console.log('dbUserPassword: ' + dbUser.password)
     },
 }
 
 function getUserCredentials(req){
     const unauthenticatedUser = {}
 
-    unauthenticatedUser.credentials = req.params.userCredentials
+    unauthenticatedUser.email = req.params.userCredentials
     unauthenticatedUser.password = req.body.userPassword
 
+    //console.log(req)
     return unauthenticatedUser
 }

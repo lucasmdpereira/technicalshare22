@@ -4,9 +4,9 @@ sendButton.addEventListener("click", sendFormLogin)
 function sendFormLogin(){
     let userCredentials = document.querySelector('#floatingInput').value
     if(!userCredentials) userCredentials  = 'blank'
-
+ 
     let userPassword = document.querySelector('#floatingPassword').value
-    if(!userPassword) userPassword  = 'blank'
+    if(!userPassword) userCredentials  = 'blank'
 
     const   form = document.querySelector('#credentials_form')
             form.setAttribute('action', `/login/${userCredentials}`)

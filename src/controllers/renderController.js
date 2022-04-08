@@ -1,17 +1,17 @@
 module.exports = {
-    renderPerfilPage(userAndPasswordCorrect, row, res){
+    renderPerfilPage(userAndPasswordCorrect, dbUserCredentials, res){
         //console.log(userAndPasswordCorrect)
         if (userAndPasswordCorrect == true){
-            res.render('perfil', {page: 'user_perfil', user: row[0]})
+            res.render('perfil', {page: 'user_perfil', user: dbUserCredentials})
             } else {
             res.render('loginerror')
         }
     },
-    renderSearchPage(user, searchFound, row, res){
+    renderSearchPage(user, searchFound, search, res){
         if (searchFound == true){
-            res.render('perfil', {page: 'search', user: user, data: row, statusMsg: 'Usuário(s) encontrado(s):'})
+            res.render('perfil', {page: 'search', user: user, data: search, statusMsg: 'Usuário(s) encontrado(s):'})
         }   else{
-            res.render('perfil', {page: 'search', user: user, data: row, statusMsg: 'Nenhum usuário encontrado =('})
+            res.render('perfil', {page: 'search', user: user, data: search, statusMsg: 'Nenhum usuário encontrado => Nesse caso a resposta é 42 =D'})
         }
     }
 
