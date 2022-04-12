@@ -1,0 +1,42 @@
+<%- include(`parts/header`) %>
+    <link href="/styles/navbar-top-fixed.css" rel="stylesheet">
+    <title>Technical Share - <%= user.name %> - FCamara</title>
+  </head>
+  
+<body>
+    
+  <nav class="navbar navbar-expand-md navbar-light fixed-top bg-warning">
+    <div class="container-fluid">
+      
+      <div class="fcamara_logo_alt m-3"><h1 class="fcamara_logo_alt ">F</h1></div> 
+    
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" id="teste">
+      <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-md-0">
+          <li class="nav-item">
+            <spam class="h4 nav-link active text-body">Bem vindo, <spam id="nameUser"><%= user.name %></spam><br>
+            <spam class="h6" id="emailUser" id="userTags"><%= user.email %></spam>
+          </li>
+        </ul>
+        <form class="d-flex" id="search_form" action="#" method="">
+          <input class="form-control me-2" type="search" placeholder="#pesquisa" aria-label="Search"
+        id="user_search" name="userSearch">
+          <button id="send_form_search" class="btn btn-outline-dark" type="submit">Pesquisar</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+<main class="container text-center pt-5 mt-4">
+  <%- include(`parts/${page}`) %>
+</main>
+
+<script src="/assets/dist/js/bootstrap.bundle.min.js"></script>
+<script src="/scripts/perfil.js"></script>
+</body>
+
+
+</html>

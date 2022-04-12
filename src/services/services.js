@@ -17,15 +17,17 @@ module.exports = {
         }   catch (error) {
             console.log(error);
         }
-        // console.log(query)
+        //console.log(query)
         if(query.length == 0) {
-            dbUserCredentials.id = 'null'
+            dbUserCredentials.name = 'null'
+            dbUserCredentials.email = 'null'
             dbUserCredentials.password = 'null'
         }   else{
-            dbUserCredentials.id = query[0].dataValues.id
+            dbUserCredentials.name = query[0].dataValues.name
+            dbUserCredentials.email = query[0].dataValues.email
             dbUserCredentials.password = query[0].dataValues.password  
         }
-        // console.log(dbUserCredentials)
+        //console.log(dbUserCredentials)
         return dbUserCredentials
     },
     async tagsNamesEmailIds(){

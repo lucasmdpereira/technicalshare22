@@ -1,42 +1,141 @@
-<%- include(`parts/header`) %>
-    <link href="/styles/navbar-top-fixed.css" rel="stylesheet">
-    <title>Technical Share - <%= user.name %> - FCamara</title>
-  </head>
-  
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Share</title>
+
+    <link rel="stylesheet" href="/styles/home.css">
+
+    <link rel="stylesheet" href="/styles/searchbar.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/sign-in/">
+    <link href="/public/assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+</head>
 <body>
+  <section class="sidebar">
     
-  <nav class="navbar navbar-expand-md navbar-light fixed-top bg-warning">
-    <div class="container-fluid">
-      
-      <div class="fcamara_logo_alt m-3"><h1 class="fcamara_logo_alt ">F</h1></div> 
-    
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" id="teste">
-      <span class="navbar-toggler-icon"></span>
-      </button>
-    
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar-nav me-auto mb-md-0">
-          <li class="nav-item">
-            <spam class="h4 nav-link active text-body">Bem vindo, <spam id="nameUser"><%= user.name %></spam><br>
-            <spam class="h6" id="emailUser" id="userTags"><%= user.email %></spam>
-          </li>
-        </ul>
-        <form class="d-flex" id="search_form" action="#" method="">
-          <input class="form-control me-2" type="search" placeholder="#pesquisa" aria-label="Search"
-        id="user_search" name="userSearch">
-          <button id="send_form_search" class="btn btn-outline-dark" type="submit">Pesquisar</button>
+      <h2><img src="/images/perfil.svg" alt="">Technical Share</h2>
+ 
+      <div class="main">
+      <a href="/home/<%= userName %>"><span><img src="/images/home.svg" alt=""></span>Home</a>
+      <a href=""><span><img src="/images/profissionais.svg" alt=""></span>Profissionais</a>
+      <a href=""><span><img src="/images/forum.svg" alt=""></span>Fórum</a>
+      <a href=""><span><img src="/images/noticias.svg" alt=""></span>Notícias</a>
+      <a href=""><span><img src="/images/salaestudos.svg" alt=""></span>Sala de Estudos</a>
+    </div>
+
+    <div class="others">
+        <a href=""><span><img src="/images/config.svg" alt=""></span>Config</a>
+        <a href=""><span><img src="/images/subscription.svg" alt=""></span>Subscription</a>
+        <a href=""><span><img src="/images/ideas.svg" alt=""></span>Ideas</a>
+    </div>
+  </section>
+
+  <main>
+    <div class="myflexcontainer">
+
+      <h1>Olá, <%= userName %></h1>
+      <div class="wrap">
+        <div class="search">
+          <form action=""></form>
+          <input type="text" class="searchTerm" placeholder="Pesquise por tags de assunto, colaborador...">
+          <button type="submit" class="searchButton">
+            <img src="/images/search.svg" alt="">
+           <i class="fa fa-search"></i>
+          </button>
         </form>
       </div>
     </div>
-  </nav>
+    
+    
+    <div class="sugestoes">
+      <p>Sugestões:</p>
+      <ul>
+        <li>Figma</li>
+        <li>UX</li>
+        <li>Design Thinking</li>
+      </ul>
+    </div>
+    <div class="setores">
+      <h2>Conheça os Sangues Laranjas de cada setor</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>UX/UI<br>DESIGN</h3>
+          <img src="/images/avatars.svg" alt="">
+        </div>
+        <div class="card">
+          <h3>ENGENHEIROS<br>DE SOFTWARE</h3>
+          <img src="/images/avatars.svg" alt="">
+        </div>
+        <div class="card">
+          <h3>DEV'S<br>BACK-END</h3>
+          <img src="/images/avatars.svg" alt="">
+        </div>
+        <div class="card">
+          <h3>TECH<br>LEADERS</h3>
+          <img src="/images/avatars.svg" alt="">
+        </div>
+        <div class="card">
+          <h3>PROCUCT<br>OWNERS</h3>
+          <img src="/images/avatars.svg" alt="">
+        </div>
+        <div class="card">
+          <h3>QA'S</h3>
+          <img src="/images/avatars.svg" alt="">
+        </div>
+  
+      </div>
+    </div>
+  </div>
+  </main>
+  
+  <section class="rigth_bar">
+    <div class="calendar">
+      <img src="/images/calendar.svg" alt="">
+    </div>
+    <div class="notifications">
+      <div>
+        <h3>Notificações</h3>
+        <ul>
+          <li>
+       
+              <img src="/images/Ellipse 23.svg" alt="">
+              <div>
+                <h3>Jamile Mira</h3>
+                <p>Porém, cada uma dessas áreas...</p>
+              </div>
+     
+          </li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-<main class="container text-center pt-5 mt-4">
-  <%- include(`parts/${page}`) %>
-</main>
-
-<script src="/assets/dist/js/bootstrap.bundle.min.js"></script>
-<script src="/scripts/perfil.js"></script>
 </body>
-
-
 </html>

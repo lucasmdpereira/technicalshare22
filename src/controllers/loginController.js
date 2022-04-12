@@ -7,7 +7,9 @@ module.exports = {
         const dbUserCredentials = await services.queryUserDBCredentials(req.userCredentials) 
             if (dbUserCredentials.password == req.userPassword){
                 res.continue = 'true'
-                console.log(res)
+                res.name = dbUserCredentials.name
+                res.email = dbUserCredentials.email
+                //console.log(res)
                 }   else{
                     res.continue = 'false'
                 }

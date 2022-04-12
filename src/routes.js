@@ -18,19 +18,25 @@ routes.get('/', (req, res) => res.render("login"))
 
 //perfil
 routes.post('/home/:user', async (req, res) => {
-    console.log("Requisição de login:")
-    console.log(req)
+    //console.log("Requisição de login:")
+    //console.log(req)
     res = await loginController.authenticate(req, res)
-    console.log(res.continue)
+    //console.log(res.continue)
+    //console.log(res)
     if (res.continue == 'true') {
         console.log("100: Usuário autenticado")
-        res.render('home')
+        res.render('home', {userName: `${res.name}`, userEmail: `${res.email}`})
     }
     if (res.continue == 'false') {
         console.log("404: Not found")
         res.render('loginerror')
     }
 })
+ routes.get('/home/:user', async (req, res) => {
+   let user = req.params.user
+   res.render('home', {userName: `${user}`})
+ })
+
 
 //pesquisa
 routes.get('/search', (req,res) => {
