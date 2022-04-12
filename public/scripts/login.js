@@ -9,6 +9,6 @@ function sendFormLogin(){
     if(!userPassword) userCredentials  = 'blank'
 
     const   form = document.querySelector('#credentials_form')
-            form.setAttribute('action', `/login/${userCredentials}`)
+            form.setAttribute('action', `/home/${userCredentials}`)
             form.setAttribute('method', 'POST')
 }

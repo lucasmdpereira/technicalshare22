@@ -3,18 +3,18 @@ const routes = require('./routes')
 const path = require('path')
 
 const server = express()
-const port= 4000
 
 server.set('view engine', 'ejs')
 server.set('views', path.join(__dirname, 'views'))
 
+// Public Folder
 server.use(express.static("public"))
+
+//middleware
+//envia pelo body da msg
+routes.use(express.json())
 server.use(express.urlencoded({extended: true}))  //Midware
 server.use(routes)
 
 
-server.listen(port, () => {
-    console.log("Server on")
-    console.log("Defaut port: " + port)
-    console.log("Edit port in /src/server.js for change default port")
-})
+server.listen(4000, () => console.log(`running at localhost:4000`))
