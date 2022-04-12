@@ -3,7 +3,7 @@ const routes = require('./routes')
 const path = require('path')
 
 const server = express()
-const port= 3000
+const port= 4000
 
 server.set('view engine', 'ejs')
 server.set('views', path.join(__dirname, 'views'))

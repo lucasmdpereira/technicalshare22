@@ -1,0 +1,48 @@
+.container {
+  max-width: 960px;
+}
+
+.fcamara_logo:not(h1){
+  background-color: orange;
+  width: 4rem;
+  height:  4rem;
+  color: black;
+  margin: auto;
+  border-radius: 4rem 0rem 4rem 4rem;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+h1 .fcamara_logo{
+  font-size: 4rem;
+  padding-bottom: 0.5rem;
+  color: #f5f5f5
+}
+
+#Quero_ensinar, #Quero_aprender{
+  color: orange
+}
+
+.custom-checkbox .custom-control-input:checked ~ .custom-control-label::before {
+  background-color: orange!important;
+  
+}
+
+.custom-checkbox .custom-control-input:checked:focus ~ .custom-control-label::before {
+  box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem orange;
+
+}
+.custom-checkbox .custom-control-input:focus ~ .custom-control-label::before {
+  box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem orange;
+  }
+.custom-checkbox .custom-control-input:active ~ .custom-control-label::before {
+  background-color: orange; 
+}
+
+.custom-checkbox .custom-control-input:not(:checked) ~ .custom-control-label::before {
+  border: 1px orange solid;
+  background-color: #f5f5f5; 
+}

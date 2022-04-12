@@ -45,7 +45,14 @@
 
 <p>Dia 6: Integração a AWS; Refatoração e teste de funções com jest;
 ToDo: Criptografia de senhas com bcryptjs
+BugFix: Erros ao enviar formulário em branco.
+BugFix: Erros de login aparecem no Front-end.
 </p>
+
+<p>Dia 7: Implantação do banco de dados assíncrono; Implantação da feature de cadastro de usuário; Front end de cadastro do usuário com validação de campos.
+ToDo: Criptografia de senhas com bcryptjs
+</p>
+
 
 <h3>📝 Licença</h3>
 <p>Este projeto está sob a licença MIT. Veja o arquivo <a href="https://github.com/lucasmdpereira/nlwtogether2020_origin/blob/main/LICENSE.md"> LICENSE </a> para mais detalhes.<p>

@@ -27,6 +27,7 @@ module.exports = {
     async searchTagInDataBase(search){
         let query
         let res = []
+        if (search != 'all') {
         try{
             await database.sync();
             query = await usersData.findAll({
@@ -35,15 +36,16 @@ module.exports = {
         }   catch (error) {
             console.log(error);
             }
-        //console.log(query)
-   
+
+        //Como o banco não aceita RegEx, vamos filtra em memória:
         let usersFoundId = []
         let j = 0;
         for (let i = 0; i < query.length; i++){
             //ler, dividir e armazenar id do usuário num array
             console.log(query[i].dataValues.tag.includes(`${search}`))
+            //dividir as tags
             query[i].dataValues.tag = query[i].dataValues.tag.split(' ')
-            //console.log(query[i].dataValues.tag)
+            //Procura nas tag a pesquisa do usuário e separa os id dos usuários encontrados.            
             if(query[i].dataValues.tag.includes(`${search}`) == true)
             {
                //console.log(query[i].dataValues)
@@ -52,9 +54,8 @@ module.exports = {
                 console.log('users: ' + j)
             }
             }
-            console.log(usersFoundId.length)
-            // console.log('número de usuários encontrados: ' + usersFoundId.length)
-        //console.log(j)
+        
+        //Finalmente, seleciona no banco de dados somente os usuários que possuem a tag pesquisada
         let filteredResponse =  []
         const { Op } = require("sequelize");
         for(let i = 0; i < usersFoundId.length; i++){
@@ -71,53 +72,53 @@ module.exports = {
             }   catch (error) {
                 console.log(error);
             }
-        }
-        
-        
-            
-        
-            //finalmente padronizar a resposta e enviar 
-            console.log(filteredResponse.length)
-            for(let i = 0; i < filteredResponse.length; i++)
-            {
-                res[i] = filteredResponse[i].dataValues
+        } 
+
+        } else{
+            try{
+                await database.sync();
+                filteredResponse = await usersData.findAll()               
+            }   catch (error) {
+                console.log(error);
             }
-            //console.log(res)
-            return res
-        
-        
-    
+        }
+        //finalmente padronizar a resposta e enviar 
+        for(let i = 0; i < filteredResponse.length; i++){
+            res[i] = filteredResponse[i].dataValues
+        }
+        return res
     },
-        //filtrar resposta e pegar id
-        
-        // for (let i = 0; i < query.length; i++){
-        //     query[i] = query[i].dataValues
-        // }
 
-        //console.log(filteredResponse)
-        //return query
+    async checkIfEmailExist(subscribeEmail){
+        let emailInDatabase = 'false'
+        try{
+            await database.sync();
+            emailExist = await usersData.findAll({
+                where: {
+                    email: `${subscribeEmail}`
+                }
+            })
+        }   catch (error) {
+            console.log(error);
+        }
+        if (emailExist.length) emailInDatabase = 'true'
+        return emailInDatabase
+    },
 
-
-
-
-
-        // let sql
-        // if  (search == 'all') {sql= `SELECT ALL * FROM users`}
-        //     else    {sql = `SELECT ALL * FROM users WHERE tags LIKE '%${search}%'`}
-        // db.all(sql,[],(err,row)=>{
-        //     let erro
-        //     let searchFound
-        //     if (row != 0){
-        //         searchFound = true
-        //         renderController.renderSearchPage(user, searchFound, row, res) 
-        //         erro = false
-        //     }   else{
-        //         searchFound = false
-        //         erro= '404: Nenhuma entrada encontrada'
-        //         if (err){erro= '400:' + err}   
-        //         renderController.renderSearchPage(user, searchFound, row, res) 
-        //     }
-
-        // })
+    async subscribeUser(subscribeData){
+        try{
+            await database.sync();
+            let insertInDb = await usersData.create({
+                email: `${subscribeData.subscribeEmail}`,
+                name: `${subscribeData.subscribeName}`,
+                password: `${subscribeData.subscribePassword}`,
+                tag: `${subscribeData.subscribeTags}`
+            })
+            //console.log(insertInDb)
+        }
+        catch(error){
+            console.log(error)
+        }
+    },
 }
  
