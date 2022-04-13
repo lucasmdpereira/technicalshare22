@@ -31,6 +31,7 @@ h1{
 .homecard img{
     width: 18.75rem;
     height: 13.75rem;
+    overflow-y: hidden;
 }
 
 .stamp{

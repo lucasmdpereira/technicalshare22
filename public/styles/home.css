@@ -6,6 +6,7 @@
     font-size: 14.4px;
     font-family: 'Roboto', sans-serif !important;
     list-style-type: none; 
+    overflow-x: hidden;
 }
 
 body{
@@ -84,7 +85,7 @@ main{
     padding: 3.7rem;
 }
 
-main h1{
+main h1, main h1 span{
     font-family: 'Roboto', sans-serif !important;
     font-weight: 800 !important;
     letter-spacing: 0.0125rem;
@@ -194,6 +195,13 @@ main h1{
     align-items: center;
 }
 
+.invisibleEJS{
+    visibility: hidden;
+    width: 0px;
+    height: 0px;
+    margin: 0;
+    padding: 0;
+}
 
 
 /* margin: 1.125rem 0.9375rem; */

@@ -19,10 +19,10 @@ routes.get('/', (req, res) => res.render("login"))
 //perfil
 routes.post('/home/:user', async (req, res) => {
     //console.log("Requisição de login:")
-    console.log(req)
+    //console.log(req)
     res = await loginController.authenticate(req, res)
     //console.log(res.continue)
-    console.log(res)
+    //console.log(res)
     if (res.continue == 'true') {
         console.log("100: Usuário autenticado")
         res.render('home', {userName: `${res.name}`, userEmail: `${res.email}`})
@@ -32,15 +32,18 @@ routes.post('/home/:user', async (req, res) => {
         res.render('loginerror')
     }
 })
-//  routes.get('/home/:user', async (req, res) => {
-//    let user = req.params.user
-//    res.render('home', {userName: `${user}`})
-//  })
+ routes.get('/home/:user', async (req, res) => {
+   //console.log(req.params)
+   let user = req.params.user
+   res.render('home', {userName: `${user}`,userEmail: `${res.email}`})
+ })
 
 
 //pesquisa
-routes.post('/pesquisa/:userSearch', async (req,res) => {
+routes.post('/pesquisa/:userSearch/:userData', async (req,res) => {
   console.log(req)
+  userData = JSON.parse(req.params.userData)
+  console.log(userData)
   res = await searchController.search(req, res)
 
   
@@ -61,7 +64,7 @@ routes.post('/pesquisa/:userSearch', async (req,res) => {
   // console.log(tag)
   // console.log(office)
 
-res.render('catalogo', {id: `${id}`, name: `${name}`, tag: `${tag}`, office: `${office}`})
+res.render('catalogo', {id: `${id}`, name: `${name}`, tag: `${tag}`, office: `${office}`, userName: `${userData.name}`, userEmail: `${userData.email}`})
 })
 
 //subscribe

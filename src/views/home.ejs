@@ -61,7 +61,8 @@
   <main>
     <div class="myflexcontainer">
 
-      <h1 id="greetings">Olá, <%= userName %></h1>
+      <h1>Olá, <span id="userName"><%= userName %></span></h1>
+      <span id="userEmail" class="invisibleEJS"><%= userEmail%></span>
       <div class="search_container">
         <form id="search_form" method="#" action="">
           <input type="text" class="search_input" id="user_search" placeholder="Pesquise por tags de assunto, colaborador..." name="user_search">

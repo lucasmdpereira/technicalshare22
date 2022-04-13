@@ -42,7 +42,7 @@
       <h2><img src="/images/perfil.svg" alt="">Technical Share</h2>
  
       <div class="main">
-      <a href="/home"><span><img src="/images/home.svg" alt=""></span>Home</a>
+      <a href="/home/<%= userName %>"><span><img src="/images/home.svg" alt=""></span>Home</a>
       <a href=""><span><img src="/images/profissionais.svg" alt=""></span>Profissionais</a>
       <a href=""><span><img src="/images/forum.svg" alt=""></span>Fórum</a>
       <a href=""><span><img src="/images/noticias.svg" alt=""></span>Notícias</a>
@@ -59,7 +59,8 @@
   <main>
     <div class="myflexcontainer">
 
-      <h1>Olá,</h1>
+      <h1>Olá, <span id="userName"><%= userName %></span></h1>
+      <span id="userEmail" class="invisibleEJS"><%= userEmail%></span>
       <div class="search_container">
         <form id="search_form" method="#" action="">
           <input type="text" class="search_input" id="user_search" placeholder="Pesquise por tags de assunto, colaborador..." name="user_search">
