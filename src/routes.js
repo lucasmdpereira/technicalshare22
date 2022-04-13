@@ -1,6 +1,6 @@
 const express = require('express')
 const loginController = require('./controllers/loginController')
-//const searchController = require('./controllers/old/searchController')
+const searchController = require('./controllers/searchController')
 const services = require('./services/services')
 const multer = require('multer')
 const path = require('path');
@@ -19,10 +19,10 @@ routes.get('/', (req, res) => res.render("login"))
 //perfil
 routes.post('/home/:user', async (req, res) => {
     //console.log("Requisição de login:")
-    //console.log(req)
+    console.log(req)
     res = await loginController.authenticate(req, res)
     //console.log(res.continue)
-    //console.log(res)
+    console.log(res)
     if (res.continue == 'true') {
         console.log("100: Usuário autenticado")
         res.render('home', {userName: `${res.name}`, userEmail: `${res.email}`})
@@ -32,18 +32,36 @@ routes.post('/home/:user', async (req, res) => {
         res.render('loginerror')
     }
 })
- routes.get('/home/:user', async (req, res) => {
-   let user = req.params.user
-   res.render('home', {userName: `${user}`})
- })
+//  routes.get('/home/:user', async (req, res) => {
+//    let user = req.params.user
+//    res.render('home', {userName: `${user}`})
+//  })
 
 
 //pesquisa
-routes.get('/search', (req,res) => {
-    req = req.query.search
-    console.info('INFO => route /search: ' + req)
-    searchController.search(req, res)
-    //console.log(req)
+routes.post('/pesquisa/:userSearch', async (req,res) => {
+  console.log(req)
+  res = await searchController.search(req, res)
+
+  
+  //console.log(res.search)
+  let id = []
+  let name = []
+  let tag = []
+  let office = []
+  for (let i = 0; i < res.search.length; i++){
+    id[i] =  res.search[i].id
+    name[i] = res.search[i].name
+    tag[i] = res.search[i].tag
+    office[i] = res.search[i].office
+  }
+
+  // console.log(id)
+  //console.log(name)
+  // console.log(tag)
+  // console.log(office)
+
+res.render('catalogo', {id: `${id}`, name: `${name}`, tag: `${tag}`, office: `${office}`})
 })
 
 //subscribe

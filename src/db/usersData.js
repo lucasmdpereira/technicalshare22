@@ -31,7 +31,7 @@ const createTable = database.define('users', {
     },
     picture:{
         type: Sequelize.STRING,
-        allowNull: false,
+        allowNull: true,
      },
     market_saude:{
         type: Sequelize.STRING,

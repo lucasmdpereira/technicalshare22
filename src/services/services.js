@@ -30,12 +30,12 @@ module.exports = {
         //console.log(dbUserCredentials)
         return dbUserCredentials
     },
-    async tagsNamesEmailIds(){
+    async tagsNamesOfficeIds(){
         let query
         try{
             await database.sync();
             query = await usersData.findAll({
-                attributes: ['id', 'tag', 'name','email']
+                attributes: ['id', 'tag', 'name','office']
             })
         }   catch (error) {
             console.log(error);

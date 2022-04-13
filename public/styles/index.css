@@ -1,0 +1,193 @@
+:root {
+    --bg-sidebar-color: #36357E;
+    --bt-color: #FE5517;
+    --font-color: #ffffff;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+    font-size: 14.4px;
+    font-family: 'Roboto', sans-serif !important;
+}
+
+body, html{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sidebar{
+   width: 5.625rem;
+   height: 100%;
+   background-color: var(--bg-sidebar-color); 
+}
+
+h1 .fcamara_logo{
+    font-size: 1.875rem;
+    padding-left: 0.2rem;
+  }
+
+  form{
+      width: 100%;
+  }
+
+.fcamara_logo:not(h1){
+    background-color:#FE5517;
+    width: 1.875rem;
+    height:  1.875rem;
+    color:#36357E;
+    margin: 3.75rem 1.875rem;
+    border-radius: 1.875rem 0rem 1.875rem 1.875rem;
+    margin-bottom: 0.625rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 400;
+}
+
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25.375rem;
+}
+
+h1{
+    text-align: center;
+    padding-bottom: 2.5rem;
+    font-weight: 800 !important;
+    line-height: 3.5156rem !important;
+    font-size: 3rem !important;
+}
+
+#floatingInput{
+    margin-bottom: 1.5rem;
+    font-family: 'Rubik', sans-serif !important;
+}
+
+#floatingPassword{
+    margin-bottom: 3.4375rem;
+    font-family: 'Rubik', sans-serif !important;
+}
+
+#send_form_button{
+    font-family: 'Rubik', sans-serif !important;
+}
+
+.login_container{
+    width: 25.375rem;
+}
+
+.flex_container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.info__flex_container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+div .form-floating{
+    width: 200rem !important
+}
+
+h2{
+    text-align: left;
+}
+
+.info__title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+}
+
+.info{
+    width: 35.75rem;
+    height: 100%;
+    background-color: var(--bg-sidebar-color);
+    border-radius: 3.125rem 0 0 3.125rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--font-color);
+    -webkit-box-shadow: -6px 9px 8px 2px rgba(0,0,0,0.62); 
+    box-shadow: -6px 9px 8px 2px rgba(0,0,0,0.62);
+}
+
+.info__container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 7rem 0;
+}
+
+.info__h2{
+    font-weight: 600;
+    font-size: 3rem;
+    padding-bottom: 3.8125rem;
+}
+
+.left{
+    border-right: solid 3px white;
+}
+
+.info__h2 spam{
+    font-size: 1.875rem;
+    display: block;
+}
+
+li{
+    font-size: 0.9375rem;
+
+}
+  
+.info__flex_container{
+    width: 100%;
+    align-items: stretch;
+}
+
+.left{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    text-align: right;
+}
+
+.left p{
+    padding-bottom: 11.9375rem;
+}
+
+.rigth{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    text-align: left;
+    padding-top: 6.5625rem;
+}
+
+button{
+    background-color:#FE5517  !important;
+    color: #FCFCFC !important;
+    font-family: 'Rubik', sans-serif !important;
+}
+
+button:hover{
+    background-color:#b1380c !important;
+}
+
