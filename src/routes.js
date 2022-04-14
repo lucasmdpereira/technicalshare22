@@ -22,7 +22,7 @@ routes.post('/home/:user', async (req, res) => {
     //console.log(req)
     res = await loginController.authenticate(req, res)
     //console.log(res.continue)
-    console.log(res)
+    //console.log(res)
     if (res.continue == 'true') {
         console.log("100: Usuário autenticado")
         res.render('home', {userName: `${res.name}`, userEmail: `${res.email}`})
@@ -32,11 +32,12 @@ routes.post('/home/:user', async (req, res) => {
         res.render('loginerror')
     }
 })
- routes.get('/home/:user', async (req, res) => {
-   //console.log(req.params)
+ routes.get('/home/:user/:email', async (req, res) => {
+   console.log(req)
    let user = req.params.user
+   let email = req.params.email
 
-   res.render('home', {userName: `${user}`,userEmail: `${res.email}`})
+   res.render('home', {userName: `${user}`,userEmail: `${email}`})
  })
 
 
@@ -44,7 +45,7 @@ routes.post('/home/:user', async (req, res) => {
 routes.post('/pesquisa/:userSearch/:userData', async (req,res) => {
   //console.log(req)
   userData = JSON.parse(req.params.userData)
-  console.log(userData)
+  //console.log(userData)
   res = await searchController.search(req, res)
 
   
@@ -55,6 +56,7 @@ routes.post('/pesquisa/:userSearch/:userData', async (req,res) => {
   let office = []
   let picture = []
   let email = []
+  let gender = []
   for (let i = 0; i < res.search.length; i++){
     id[i] =  res.search[i].id
     name[i] = res.search[i].name
@@ -62,16 +64,52 @@ routes.post('/pesquisa/:userSearch/:userData', async (req,res) => {
     office[i] = res.search[i].office
     picture[i] = res.search[i].picture
     email[i] = res.search[i].email
+    gender[i] = res.search[i].gender
   }
 
-  // console.log(id)
+  //console.log(id)
   //console.log(name)
   // console.log(tag)
   //console.log(office)
   //console.log(picture)
 
-res.render('catalogo', {id: `${id}`, name: `${name}`, tag: `${tag}`, office: `${office}`, userName: `${userData.name}`, userEmail: `${userData.email}`, picture: `${picture}`, email: `${email}`})
+res.render('catalogo', {id: `${id}`, name: `${name}`, tag: `${tag}`, office: `${office}`, userName: `${userData.name}`, userEmail: `${userData.email}`, picture: `${picture}`, email: `${email}`, gender: `${gender}`})
 })
+
+routes.get('/pesquisa/:userSearch/:userData', async (req,res) => {
+  //console.log(req)
+  userData = JSON.parse(req.params.userData)
+  //console.log(userData)
+  res = await searchController.search(req, res)
+
+  
+  //console.log(res.search)
+  let id = []
+  let name = []
+  let tag = []
+  let office = []
+  let picture = []
+  let email = []
+  let gender = []
+  for (let i = 0; i < res.search.length; i++){
+    id[i] =  res.search[i].id
+    name[i] = res.search[i].name
+    tag[i] = res.search[i].tag
+    office[i] = res.search[i].office
+    picture[i] = res.search[i].picture
+    email[i] = res.search[i].email
+    gender[i] = res.search[i].gender
+  }
+
+  //console.log(id)
+  //console.log(name)
+  // console.log(tag)
+  //console.log(office)
+  //console.log(picture)
+
+res.render('catalogo', {id: `${id}`, name: `${name}`, tag: `${tag}`, office: `${office}`, userName: `${userData.name}`, userEmail: `${userData.email}`, picture: `${picture}`, email: `${email}`, gender: `${gender}`})
+})
+
 
 //subscribe
 routes.get('/subscribe', (req, res) => res.render("subscribe"))

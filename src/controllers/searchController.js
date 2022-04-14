@@ -57,7 +57,7 @@ module.exports = {
     }
         //console.log('INFO => Users found: ')
         
-        //console.log(res.search)
+        console.log(res.search)
 
 
 

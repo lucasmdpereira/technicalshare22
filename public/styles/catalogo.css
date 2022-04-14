@@ -15,11 +15,10 @@ body, html{
     width: 100%;
     height: auto;
     display: flex;
-    justify-content: space-between;
 }
 
 .left{
-    flex: 0.20;
+    width: 16.5625rem;
     background-color: #FBFBFB;
     height: 100%;
 }
@@ -106,17 +105,11 @@ body, html{
 }
 
 .menu__user{
-    padding-bottom: 3.75rem;
-    
-}
-
-.menu__user p{
-    text-align: center;
+    padding-bottom: 3.75rem;;
 }
 
 .center{
-    flex: 0.6;
-    width: 100%;
+    flex: 1;
 }
 
 .center__container{
@@ -180,155 +173,125 @@ body, html{
 .top__search button img{
     width: initial;
     height: initial;
-    transition: 0.5s;
-    transition-timing-function: ease-in-out;
-}
+ }
 
 .top__search button img:hover{
     width: 3rem;
     height: 3rem;
-    transition: 1s;
-    transition-timing-function: ease-in-out;
 }
 
 .center__down{
+    padding: 3.375rem 0;
     display: flex;
-    padding-top: 4.0625rem;
+    flex-wrap: wrap;
+    gap: 1rem;
 }
 
-.center__down h2{
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 1.25rem;
-}
-
-.center__down .card{
-    width: 18.125rem;
-    height: 19rem;
-    border-radius: 1.25rem;
-    color: #FFFFFF;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-around;
-    padding: 1.5625rem;
-    margin: 1.625rem 0;
-}
-
-.card .date{
-    width: 6.25rem;
-    height: 6.25rem;
-    border-radius: 6.25rem;
-    background-color: #FFFFFF;
-    align-self: flex-start;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.card .date p{
-    font-family: 'Rubik';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 1.25rem;
-}
-
-.card .date h3{
-    font-family: 'Rubik';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 2rem;
-}
-
-.card .hour p{
-    font-family: 'Rubik';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 1.25rem;
-}
-
-.card .who{
-    display: flex;
-    align-items: center;
-    gap: 0.5625rem;
-}
-
-.card .who p{
-    font-family: 'Rubik';
-    font-style: normal; 
-    font-weight: 500;
-    font-size: 1rem;
-}
-
-.down__mentor{
-    flex: 0.5
-}
-
-.down__mentor .date{
-    color: #2A2962;
-}
-
-.down__mentor .card{
-    background-color: #2A2962;
-}
-
-.down__mentorado{
-    flex: 0.5
-}
-
-.down__mentorado .date{
-    color: #6263AB;
-}
-
-.down__mentorado .card{
-    background-color: #6263AB;
-}
-
-.right{
-    flex: 0.2;
-    padding: 4.375rem 2.8125rem;
-}
-
-.right__container{
-    display: flex;
-    flex-direction: column;
-}
-
-.right__container h2{
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 1.25rem;
-    padding-left: 0.9375rem;
-    padding-bottom: 0.9375rem;
-}
-
-.pop{
-    width: 22.5rem;
-    height: 4.625rem;
+.perfil__card{
+    width: 18.75rem;
+    height: 27.625rem;
     background-color: #E0E1E2;
-    border-radius: 0.625rem;
+    border-radius: 1.25rem;
+    margin: 0;
+}
+
+.card__top{
+    height: 50%;
+}
+
+.card__top img{
+    width: 18.75rem;
+    height: 100%;
+    border-radius: 1.25rem 1.25rem 0 0;
+}
+
+.card__bottom{
+    height: 50%;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    padding: 0.875rem;
+    justify-content: flex-start;
+    padding: 0 2.0625rem;
 }
 
-.pop img{
-    margin-right: 0.875rem;
+.bottom__personal{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.pop h3{
+.personal__title{
+    display: flex;
+    align-items: baseline;
+}
+
+.personal__title h2{
     font-family: 'Rubik';
-    font-style: normal;
+    font-weight: 600;
+    font-size: 1.125rem;
+    margin-top: 0.875rem;
+    padding-right: 1rem;
+    border-right: 2px black solid;
+    color: #292E32;
+}
+
+.personal__title h3{
+    font-family: 'Rubik';
     font-weight: 600;
     font-size: 1rem;
+    color: #5D6165;
+    padding-left: 1rem;
 }
 
-.pop p{
+.personal__gender{
+    margin-top: 0.5625rem;
     font-family: 'Rubik';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 0.8125rem;
+    font-weight: 600;
+    font-size: 0.75rem;
+    color: #5D6165;
+    padding-bottom: 1rem;
 }
+
+.personal__tags{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 1rem;
+    column-gap: max(auto,1rem);
+}
+
+.personal__tags p{
+    text-align: center;
+    background-color: #2A2962;
+    color: #FBFBFB;
+    font-family: 'Rubik';
+    font-weight: 600;
+    font-size: 0.875rem;
+    padding: 0.25rem 0.625rem;
+    border-radius: 3.3125rem;
+}
+
+.tag__button{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.seeButton{
+    background-color: orangered;
+    width: 14.625rem !important;
+    height: 2.3125rem;
+    border-radius: 0 0 1.25rem 1.25rem;
+    padding: 0 2.0625rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Rubik';
+    font-weight: 600;
+    font-size: 0.875rem;
+    color: #FBFBFB;
+}
+
+
