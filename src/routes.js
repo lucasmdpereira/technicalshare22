@@ -22,7 +22,7 @@ routes.post('/home/:user', async (req, res) => {
     //console.log(req)
     res = await loginController.authenticate(req, res)
     //console.log(res.continue)
-    //console.log(res)
+    console.log(res)
     if (res.continue == 'true') {
         console.log("100: Usuário autenticado")
         res.render('home', {userName: `${res.name}`, userEmail: `${res.email}`})
@@ -35,13 +35,14 @@ routes.post('/home/:user', async (req, res) => {
  routes.get('/home/:user', async (req, res) => {
    //console.log(req.params)
    let user = req.params.user
+
    res.render('home', {userName: `${user}`,userEmail: `${res.email}`})
  })
 
 
 //pesquisa
 routes.post('/pesquisa/:userSearch/:userData', async (req,res) => {
-  console.log(req)
+  //console.log(req)
   userData = JSON.parse(req.params.userData)
   console.log(userData)
   res = await searchController.search(req, res)
@@ -52,19 +53,24 @@ routes.post('/pesquisa/:userSearch/:userData', async (req,res) => {
   let name = []
   let tag = []
   let office = []
+  let picture = []
+  let email = []
   for (let i = 0; i < res.search.length; i++){
     id[i] =  res.search[i].id
     name[i] = res.search[i].name
     tag[i] = res.search[i].tag
     office[i] = res.search[i].office
+    picture[i] = res.search[i].picture
+    email[i] = res.search[i].email
   }
 
   // console.log(id)
   //console.log(name)
   // console.log(tag)
-  // console.log(office)
+  //console.log(office)
+  //console.log(picture)
 
-res.render('catalogo', {id: `${id}`, name: `${name}`, tag: `${tag}`, office: `${office}`, userName: `${userData.name}`, userEmail: `${userData.email}`})
+res.render('catalogo', {id: `${id}`, name: `${name}`, tag: `${tag}`, office: `${office}`, userName: `${userData.name}`, userEmail: `${userData.email}`, picture: `${picture}`, email: `${email}`})
 })
 
 //subscribe
@@ -76,6 +82,8 @@ routes.post('/subscribe/:dataSubscribe', (req, res) => {
   services.addUser(req, res)
 })
 
+
+routes.get('/perfil/:user', (req, res) => res.render("perfil"))
 
 //routes.get('/', (req, res) => res.render('uploadFoto'));
 

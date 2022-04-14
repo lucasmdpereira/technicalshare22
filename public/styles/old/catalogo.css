@@ -1,3 +1,7 @@
+a{
+    text-decoration: none !important;
+}
+
 h1{
     margin-bottom: 0.45rem;
 }
@@ -34,11 +38,21 @@ h1{
     overflow-y: hidden;
 }
 
+.homecard button{
+    position: relative;
+    width: 3.5rem ;
+    height: 2rem;
+    z-index: 10;
+    top: -2.5rem;
+    left: 14.75rem;
+}
+
+
 .stamp{
     position: relative;
     z-index: 10;
-    top: -1.5rem;
-    left: 12rem;
+    top: -12.75rem;
+    left: 1rem;
     background-color: white;
     border-radius: 0.625rem;
     font-family: 'Rubik', sans-serif !important;
@@ -74,7 +88,7 @@ h1{
 .userTags{
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start !important;
 }
 
 .userTags__container{

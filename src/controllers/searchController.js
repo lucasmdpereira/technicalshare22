@@ -6,7 +6,7 @@ module.exports = {
  
         //const user = cacheUserInfo(req); //apagar caso não precise mais
         let search = req.params.userSearch
-        console.log(search)
+        //console.log(search)
         let searchFound
         let tagsNamesOfficeIds = await services.tagsNamesOfficeIds()
         // console.log('INFO => services.takeTagsAndIds():')
@@ -18,8 +18,8 @@ module.exports = {
 
         //quebrar search em palavras
         search = search.toLowerCase().split(' ')
-        console.log('INFO => search:')
-        console.log(search)
+        //console.log('INFO => search:')
+        //console.log(search)
 
         //for para procurar
         

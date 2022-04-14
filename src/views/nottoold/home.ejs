@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Share</title>
+
+    <link rel="stylesheet" href="/styles/home.css">
+
+    <link rel="stylesheet" href="/styles/searchbar.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/sign-in/">
+    <link href="/assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+</head>
+<body>
+  <section class="sidebar">
+    
+      <h2><img src="/images/perfil.svg" alt="">Technical Share</h2>
+ 
+      <div class="main">
+      <a href="/home/<%= userName %>"><span><img src="/images/home.svg" alt=""></span>Home</a>
+
+
+
+      <a href=""><span><img src="/images/profissionais.svg" alt=""></span>Profissionais</a>
+      <a href=""><span><img src="/images/forum.svg" alt=""></span>Fórum</a>
+      <a href=""><span><img src="/images/noticias.svg" alt=""></span>Notícias</a>
+      <a href=""><span><img src="/images/salaestudos.svg" alt=""></span>Sala de Estudos</a>
+    </div>
+
+    <div class="others">
+        <a href=""><span><img src="/images/config.svg" alt=""></span>Config</a>
+        <a href=""><span><img src="/images/subscription.svg" alt=""></span>Subscription</a>
+        <a href=""><span><img src="/images/ideas.svg" alt=""></span>Ideas</a>
+    </div>
+  </section>
+
+  <main>
+    <div class="myflexcontainer">
+
+      <h1>Olá, <span id="userName"><%= userName %></span></h1>
+      <span id="userEmail" class="invisibleEJS"><%= userEmail%></span>
+      <div class="search_container">
+        <form id="search_form" method="#" action="">
+          <input type="text" class="search_input" id="user_search" placeholder="Pesquise por tags de assunto, colaborador..." name="user_search">
+          <button stype="submit" class="search_button" id="send_form_button"><img src="/images/search.svg" alt=""></button>
+        </form>
+      </div>
+    
+    
+    <div class="sugestoes">
+      <p>Sugestões:</p>
+      <ul>
+        <li>Figma</li>
+        <li>UX</li>
+        <li>Design Thinking</li>
+      </ul>
+    </div>
+    
+    <%- include(`parts/home_part`) %>

@@ -17,4 +17,4 @@ server.use(express.urlencoded({extended: true}))  //Midware
 server.use(routes)
 
 
-server.listen(3000, () => console.log(`running at localhost:4000`))
+server.listen(4000, () => console.log(`running at localhost:4000`))

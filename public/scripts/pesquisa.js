@@ -8,8 +8,8 @@ function sendFormSearch(){
     console.log(userSearch)
     // let userData = {}
     let userData = {}
-    let userName = document.querySelector('#userName').innerHTML
-    let userEmail = document.querySelector('#userEmail').innerHTML
+    let userName = document.querySelector('#userName').textContent
+    let userEmail = document.querySelector('#userEmail').textContent
 
     userData.name = userName
     userData.email = userEmail

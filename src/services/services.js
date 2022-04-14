@@ -35,7 +35,7 @@ module.exports = {
         try{
             await database.sync();
             query = await usersData.findAll({
-                attributes: ['id', 'tag', 'name','office']
+                attributes: ['id', 'tag', 'name','office','picture','email']
             })
         }   catch (error) {
             console.log(error);

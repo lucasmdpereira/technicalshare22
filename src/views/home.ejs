@@ -8,76 +8,121 @@
 
     <link rel="stylesheet" href="/styles/home.css">
 
-    <link rel="stylesheet" href="/styles/searchbar.css">
-
-    <!-- Bootstrap CSS -->
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/sign-in/">
-    <link href="/assets/dist/css/bootstrap.min.css" rel="stylesheet">
-    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    
-    <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
-      }
-
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-    </style>
 
 </head>
 <body>
-  <section class="sidebar">
-    
-      <h2><img src="/images/perfil.svg" alt="">Technical Share</h2>
- 
-      <div class="main">
-      <a href="/home/<%= userName %>"><span><img src="/images/home.svg" alt=""></span>Home</a>
+
+    <section class="left">
+        <div class="sidebar__container">
+            <div class="sidebar__header">
+                <div class="logo">
+                    F                
+                </div>
+                <p>Technical Share</p>
+            </div>
+            <div class="sidebar__menu">
+                <ul>
+                    <a href="">
+                        <li class="menu__home">
+                            <img src="/images/home.svg" alt=""> Home</li>
+                    </a>
+                    <a href="">
+                        <li class="menu__sanguesLaranja">
+                            <img src="/images/sangue.svg" alt="">  Sangues laranja</li>
+                    </a>
+                    <a href="">
+                        <li class="menu__perfil">
+                            <img src="/images/people.svg" alt="">  Perfil
+                        </li>
+                    </a>
+                </ul>
+                <div class="menu__user">
+                    <p id="userName"><%=userName%></p>
+                    <p id="userEmail"><%=userEmail%></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main class="center">
+        <div class="center__container">
+
+            <div class="center__top">
+                <div class="top__welcome">
+                    <h1>Olá, <%= userName %></h1>
+                    <p>Conecte-se com sangues laranjas, tire suas dúvidas e agende mentorias</p>
+                </div>
+                <div class="top__search">
+                    <form id="search_form" action="">
+                        <input id="user_search" type="text" placeholder="Pesquise por tags de assunto, colaborador, cargo...">
+                        <button type="submit" id="send_form_button"><img src="/images/search.svg" alt=""></button>
+                    </form>
+                </div>   
+            </div>
+                                  
+            <div class="center__down">
+                <div class="down__mentor">
+                    <h2>Sou mentor</h2>
+                    <div class="card">
+                        <div class="date">
+                            <p>Dia</p>
+                            <h3>19</h3>
+                        </div>
+                        <div class="hour">
+                            <p>Das 13h00 às 14h30</p>
+                        </div>
+                        <div class="who">
+                            <img src="/images/small_picture.svg"alt="">
+                            <p>Gabriel Almeida</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="down__mentorado">
+
+                    <h2>Sou mentorado</h2>
+                    <div class="card">
+                        <div class="date">
+                            <p>Dia</p>
+                            <h3>19</h3>
+                        </div>
+                        <div class="hour">
+                            <p>Das 13h00 às 14h30</p>
+                        </div>
+                        <div class="who">
+                            <img src="/images/small_picture.svg" alt="">
+                            <p>Gabriel Almeida</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        
+        </div>
+
+    </main>
+
+    <section class="right">
+
+        <div class="right__container">
+            <h2>Notificações</h2>
+            <div class="pop">
+                <img src="/images/pop_picture.svg" alt="">
+                <div class="pop__text">
+                    <h3>Anderson Busdek</h3>
+                    <p>Lorem ipsun santi avec tude proc van...</p>
+                </div>
+            </div>
+
+        </div>
 
 
+    </section>
 
-      <a href=""><span><img src="/images/profissionais.svg" alt=""></span>Profissionais</a>
-      <a href=""><span><img src="/images/forum.svg" alt=""></span>Fórum</a>
-      <a href=""><span><img src="/images/noticias.svg" alt=""></span>Notícias</a>
-      <a href=""><span><img src="/images/salaestudos.svg" alt=""></span>Sala de Estudos</a>
-    </div>
+</body>
 
-    <div class="others">
-        <a href=""><span><img src="/images/config.svg" alt=""></span>Config</a>
-        <a href=""><span><img src="/images/subscription.svg" alt=""></span>Subscription</a>
-        <a href=""><span><img src="/images/ideas.svg" alt=""></span>Ideas</a>
-    </div>
-  </section>
+<script src="/scripts/pesquisa.js"></script>
 
-  <main>
-    <div class="myflexcontainer">
-
-      <h1>Olá, <span id="userName"><%= userName %></span></h1>
-      <span id="userEmail" class="invisibleEJS"><%= userEmail%></span>
-      <div class="search_container">
-        <form id="search_form" method="#" action="">
-          <input type="text" class="search_input" id="user_search" placeholder="Pesquise por tags de assunto, colaborador..." name="user_search">
-          <button stype="submit" class="search_button" id="send_form_button"><img src="/images/search.svg" alt=""></button>
-        </form>
-      </div>
-    
-    
-    <div class="sugestoes">
-      <p>Sugestões:</p>
-      <ul>
-        <li>Figma</li>
-        <li>UX</li>
-        <li>Design Thinking</li>
-      </ul>
-    </div>
-    
-    <%- include(`parts/home_part`) %>
+</html>
