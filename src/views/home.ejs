@@ -122,4 +122,19 @@
 
 <script src="/scripts/pesquisa.js"></script>
 
+<script>
+    let userData = {}
+    let userName = document.querySelector('#userName').textContent
+    let userEmail = document.querySelector('#userEmail').textContent
+
+    userData.name = userName
+    userData.email = userEmail
+
+    userData = JSON.stringify(userData)
+    
+    document.querySelector('#sangueLaranja').href = `/pesquisa/all/${userData}`
+
+
+</script>
+
 </html>
