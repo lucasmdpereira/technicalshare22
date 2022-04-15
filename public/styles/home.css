@@ -1,40 +1,41 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     list-style-type: none;
-  
+
 }
 
-a{
+a {
     all: unset;
     cursor: pointer;
 }
 
-body, html{
+body,
+html {
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: space-between;
 }
 
-.left{
+.left {
     flex: 0.20;
     background-color: #FBFBFB;
 
 }
 
-.sidebar__container{
+.sidebar__container {
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
-    color:#2A2962;
+    color: #2A2962;
     align-items: center;
     box-shadow: 0px 4px 34px rgba(2, 1, 75, 0.5);
 }
 
-.sidebar__header{
+.sidebar__header {
     padding-top: 3.75rem;
     padding-bottom: 4.375rem;
     display: flex;
@@ -46,7 +47,7 @@ body, html{
     align-items: center;
 }
 
-.sidebar__header .logo{
+.sidebar__header .logo {
     width: 1.875rem;
     height: 1.875rem;
     display: flex;
@@ -60,7 +61,7 @@ body, html{
     color: #FBFBFB;
 }
 
-.sidebar__menu{
+.sidebar__menu {
     width: 100%;
     height: 100%;
     display: flex;
@@ -69,12 +70,12 @@ body, html{
     justify-content: space-between;
 }
 
-.sidebar__menu ul{
+.sidebar__menu ul {
     width: 100%;
     align-self: flex-start;
 }
 
-.sidebar__menu ul li{
+.sidebar__menu ul li {
     height: 3.5rem;
     display: flex;
     align-items: center;
@@ -85,19 +86,22 @@ body, html{
 
 }
 
-.sidebar__menu ul li:hover{
+.sidebar__menu ul li:hover {
     border-left: 1rem solid #2A2962;
     opacity: 1;
     transition: 0.5s;
     transition-timing-function: ease-in-out;
 }
 
-.sidebar__menu ul li img{
+.sidebar__menu ul li img {
     padding: 0 1rem;
     color: #2A2962;
 }
 
-.menu__home, .menu__sanguesLaranja, .menu__perfil, .menu__user{
+.menu__home,
+.menu__sanguesLaranja,
+.menu__perfil,
+.menu__user {
     font-family: 'Rubik';
     font-style: normal;
     font-weight: 700;
@@ -105,31 +109,31 @@ body, html{
     opacity: 0.4;
 }
 
-.menu__user{
+.menu__user {
     padding-bottom: 3.75rem;
-    
+
 }
 
-.menu__user p{
+.menu__user p {
     text-align: center;
 }
 
-.center{
+.center {
     flex: 0.6;
 }
 
-.center__container{
+.center__container {
     margin: 4.375rem;
     display: flex;
     flex-direction: column;
 }
 
-.center__top{
+.center__top {
     display: flex;
     flex-direction: column;
 }
 
-.top__welcome h1{
+.top__welcome h1 {
     font-family: 'Rubik';
     font-style: normal;
     font-weight: 700;
@@ -137,7 +141,7 @@ body, html{
     padding-bottom: 0.875rem;
 }
 
-.top__welcome p{
+.top__welcome p {
     font-family: 'Rubik';
     font-style: normal;
     font-weight: 400;
@@ -145,12 +149,12 @@ body, html{
     padding-bottom: 1.6875rem;
 }
 
-.top__search form{
+.top__search form {
     display: flex;
     align-items: center;
 }
 
-.top__search input{
+.top__search input {
     width: 33.25rem;
     height: 4.3125rem;
     border: none;
@@ -163,11 +167,11 @@ body, html{
     font-size: 1rem;
 }
 
-.top__search input:focus{
+.top__search input:focus {
     outline: none;
 }
 
-.top__search button{
+.top__search button {
     border: none;
     background-color: orangered;
     width: 4.9375rem;
@@ -176,33 +180,33 @@ body, html{
     cursor: pointer;
 }
 
-.top__search button img{
+.top__search button img {
     width: initial;
     height: initial;
     transition: 0.5s;
     transition-timing-function: ease-in-out;
 }
 
-.top__search button img:hover{
+.top__search button img:hover {
     width: 3rem;
     height: 3rem;
     transition: 1s;
     transition-timing-function: ease-in-out;
 }
 
-.center__down{
+.center__down {
     display: flex;
     padding-top: 4.0625rem;
 }
 
-.center__down h2{
+.center__down h2 {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 500;
     font-size: 1.25rem;
 }
 
-.center__down .card{
+.center__down .card {
     width: 18.125rem;
     height: 19rem;
     border-radius: 1.25rem;
@@ -215,7 +219,7 @@ body, html{
     margin: 1.625rem 0;
 }
 
-.card .date{
+.card .date {
     width: 6.25rem;
     height: 6.25rem;
     border-radius: 6.25rem;
@@ -227,75 +231,75 @@ body, html{
     align-items: center;
 }
 
-.card .date p{
+.card .date p {
     font-family: 'Rubik';
     font-style: normal;
     font-weight: 600;
     font-size: 1.25rem;
 }
 
-.card .date h3{
+.card .date h3 {
     font-family: 'Rubik';
     font-style: normal;
     font-weight: 500;
     font-size: 2rem;
 }
 
-.card .hour p{
+.card .hour p {
     font-family: 'Rubik';
     font-style: normal;
     font-weight: 600;
     font-size: 1.25rem;
 }
 
-.card .who{
+.card .who {
     display: flex;
     align-items: center;
     gap: 0.5625rem;
 }
 
-.card .who p{
+.card .who p {
     font-family: 'Rubik';
-    font-style: normal; 
+    font-style: normal;
     font-weight: 500;
     font-size: 1rem;
 }
 
-.down__mentor{
+.down__mentor {
     flex: 0.5
 }
 
-.down__mentor .date{
+.down__mentor .date {
     color: #2A2962;
 }
 
-.down__mentor .card{
+.down__mentor .card {
     background-color: #2A2962;
 }
 
-.down__mentorado{
+.down__mentorado {
     flex: 0.5
 }
 
-.down__mentorado .date{
+.down__mentorado .date {
     color: #6263AB;
 }
 
-.down__mentorado .card{
+.down__mentorado .card {
     background-color: #6263AB;
 }
 
-.right{
+.right {
     flex: 0.2;
     padding: 4.375rem 2.8125rem;
 }
 
-.right__container{
+.right__container {
     display: flex;
     flex-direction: column;
 }
 
-.right__container h2{
+.right__container h2 {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 500;
@@ -304,7 +308,7 @@ body, html{
     padding-bottom: 0.9375rem;
 }
 
-.pop{
+.pop {
     width: 22.5rem;
     height: 4.625rem;
     background-color: #E0E1E2;
@@ -315,33 +319,33 @@ body, html{
     margin-bottom: 1rem;
 }
 
-.pop img{
+.pop img {
     width: 2.8125rem;
     height: 2.8125rem;
     border-radius: 2.8125rem;
     margin-right: 0.875rem;
 }
 
-.pop__text{
+.pop__text {
     flex: 1;
 }
 
 
-.pop__text h3{
+.pop__text h3 {
     font-family: 'Rubik';
     font-style: normal;
     font-weight: 600;
     font-size: 1rem;
 }
 
-.pop__text p{
+.pop__text p {
     font-family: 'Rubik';
     font-style: normal;
     font-weight: 400;
     font-size: 0.8125rem;
 }
 
-.por__ver{
+.por__ver {
     width: 3.375rem;
     height: 1.75rem;
     background-color: orangered;
@@ -351,6 +355,6 @@ body, html{
     border-radius: 0.3125rem;
     font-family: 'Roboto';
     font-weight: 500;
-    font-size: 1rem;    
+    font-size: 1rem;
     color: #FBFBFB;
 }

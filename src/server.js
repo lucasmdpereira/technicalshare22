@@ -13,7 +13,9 @@ server.use(express.static("public"))
 //middleware
 //envia pelo body da msg
 routes.use(express.json())
-server.use(express.urlencoded({extended: true}))  //Midware
+server.use(express.urlencoded({
+    extended: true
+})) //Midware
 server.use(routes)
 
 

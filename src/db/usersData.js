@@ -1,6 +1,6 @@
 const Sequelize = require('sequelize');
 const database = require('./dbUsers');
- 
+
 const createTable = database.define('users', {
     id: {
         type: Sequelize.INTEGER,
@@ -16,7 +16,7 @@ const createTable = database.define('users', {
         type: Sequelize.STRING,
         allowNull: true
     },
-    tag:{
+    tag: {
         type: Sequelize.STRING,
         allowNull: true,
     },
@@ -24,24 +24,24 @@ const createTable = database.define('users', {
         type: Sequelize.STRING,
         allowNull: false,
         unique: true
-        
+
     },
-    office:{
+    office: {
         type: Sequelize.STRING,
         allowNull: false,
     },
-    bio:{
+    bio: {
         type: Sequelize.STRING,
         allowNull: true,
     },
-    password:{
+    password: {
         type: Sequelize.STRING,
         allowNull: false,
     },
-    picture:{
+    picture: {
         type: Sequelize.STRING,
         allowNull: false,
-     }
+    }
 })
- 
+
 module.exports = createTable;

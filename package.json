@@ -5,7 +5,7 @@
   "main": "./src/server.js",
   "scripts": {
     "start": "nodemon ./src/server.js",
-    "dbinit": "rm ./src/db/db.sqlite & node ./src/db/createUsersDB.js & node ./src/db/createQuestionsDB.js" ,
+    "dbinit": "rm ./src/db/db.sqlite & node ./src/db/createUsersDB.js" ,
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Lucas Pereira",

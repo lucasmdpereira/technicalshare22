@@ -7,22 +7,15 @@ const path = require('path');
 
 const routes = express.Router()
 
-//middleware
-//envia pelo body da msg
 routes.use(express.json())
-
-
 
 //Tela de login
 routes.get('/', (req, res) => res.render("login"))
 
 //perfil
 routes.post('/home/:user', async (req, res) => {
-    //console.log("Requisição de login:")
-    //console.log(req)
+
     res = await loginController.authenticate(req, res)
-    //console.log(res.continue)
-    //console.log(res)
     if (res.continue == 'true') {
         console.log("100: Usuário autenticado")
         res.render('home', {userName: `${res.name}`, userEmail: `${res.email}`})
@@ -31,7 +24,9 @@ routes.post('/home/:user', async (req, res) => {
         console.log("404: Not found")
         res.render('loginerror')
     }
+
 })
+
  routes.get('/home/:user/:email', async (req, res) => {
    console.log(req)
    let user = req.params.user
@@ -40,16 +35,12 @@ routes.post('/home/:user', async (req, res) => {
    res.render('home', {userName: `${user}`,userEmail: `${email}`})
  })
 
-
 //pesquisa
 routes.post('/pesquisa/:userSearch/:userData', async (req,res) => {
-  //console.log(req)
+  
   userData = JSON.parse(req.params.userData)
-  //console.log(userData)
   res = await searchController.search(req, res)
 
-  
-  //console.log(res.search)
   let id = []
   let name = []
   let tag = []
@@ -66,24 +57,15 @@ routes.post('/pesquisa/:userSearch/:userData', async (req,res) => {
     email[i] = res.search[i].email
     gender[i] = res.search[i].gender
   }
-
-  //console.log(id)
-  //console.log(name)
-  // console.log(tag)
-  //console.log(office)
-  //console.log(picture)
 
 res.render('catalogo', {id: `${id}`, name: `${name}`, tag: `${tag}`, office: `${office}`, userName: `${userData.name}`, userEmail: `${userData.email}`, picture: `${picture}`, email: `${email}`, gender: `${gender}`})
 })
 
 routes.get('/pesquisa/:userSearch/:userData', async (req,res) => {
-  //console.log(req)
+
   userData = JSON.parse(req.params.userData)
-  //console.log(userData)
   res = await searchController.search(req, res)
 
-  
-  //console.log(res.search)
   let id = []
   let name = []
   let tag = []
@@ -101,29 +83,10 @@ routes.get('/pesquisa/:userSearch/:userData', async (req,res) => {
     gender[i] = res.search[i].gender
   }
 
-  //console.log(id)
-  //console.log(name)
-  // console.log(tag)
-  //console.log(office)
-  //console.log(picture)
-
 res.render('catalogo', {id: `${id}`, name: `${name}`, tag: `${tag}`, office: `${office}`, userName: `${userData.name}`, userEmail: `${userData.email}`, picture: `${picture}`, email: `${email}`, gender: `${gender}`})
 })
 
 
-//subscribe
-routes.get('/subscribe', (req, res) => res.render("subscribe"))
-
-routes.post('/subscribe/:dataSubscribe', (req, res) => {
-  req = JSON.parse(req.params.dataSubscribe)
-  //console.log(req)
-  services.addUser(req, res)
-})
-
-
-routes.get('/perfil/:user', (req, res) => res.render("perfil"))
-
-//routes.get('/', (req, res) => res.render('uploadFoto'));
 
 // Set The Storage Engine
 const storage = multer.diskStorage({
@@ -179,28 +142,5 @@ routes.post('/upload', (req, res) => {
           cb('Error: Images Only!');
         }
       }
-
-//GET
-// routes.get('/', (req, res) => res.send("Hello World!"))
-// POST
-// routes.post('/', (req, res) => res.send(req.body))
-// PUT
-// let author = "Lucas Pereira"
-// routes.put('/', (req, res) => {
-//     author = req.body.nome
-//     console.log(req.body.nome)
-//     res.send(author)
-// })
-// routes.get('/', (req, res) => res.send(author))
-//DELETE
-// let author = "Lucas"
-// routes.delete('/:identificador', (req, res) => {
-//     author = ""
-//     res.send("apagado!")
-// })
-// routes.get('/:identificador', (req, res) => res.send(author))
-
-
-
 
 module.exports = routes

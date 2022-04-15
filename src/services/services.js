@@ -1,54 +1,51 @@
-const { response } = require('express');
-const database = require('../db/dbUsers'); 
+const {
+    response
+} = require('express');
+const database = require('../db/dbUsers');
 const usersData = require('../db/usersData');
-const questionsData = require('../db/questionsData');
 
 module.exports = {
-    async queryUserDBCredentials(unauthenticatedUserEmail){
+    async queryUserDBCredentials(unauthenticatedUserEmail) {
         let query
         const dbUserCredentials = {}
-        // console.log(unauthenticatedUserEmail)
-        try{
+        try {
             await database.sync();
- 
+
             query = await usersData.findAll({
                 where: {
                     email: `${unauthenticatedUserEmail}`
                 }
             })
-        }   catch (error) {
+        } catch (error) {
             console.log(error);
         }
-        //console.log(query)
-        if(query.length == 0) {
+        if (query.length == 0) {
             dbUserCredentials.name = 'null'
             dbUserCredentials.email = 'null'
             dbUserCredentials.password = 'null'
-        }   else{
+        } else {
             dbUserCredentials.name = query[0].dataValues.name
             dbUserCredentials.email = query[0].dataValues.email
-            dbUserCredentials.password = query[0].dataValues.password  
+            dbUserCredentials.password = query[0].dataValues.password
         }
-        //console.log(dbUserCredentials)
         return dbUserCredentials
     },
-    async tagsNamesOfficeIds(){
+    async tagsNamesOfficeIds() {
         let query
-        try{
+        try {
             await database.sync();
             query = await usersData.findAll({
-                attributes: ['id', 'tag', 'name','office','picture','email']
+                attributes: ['id', 'tag', 'name', 'office', 'picture', 'email']
             })
-        }   catch (error) {
+        } catch (error) {
             console.log(error);
-            }
-        for (let i = 0; i < query.length; i++){
+        }
+        for (let i = 0; i < query.length; i++) {
             query[i] = query[i].dataValues
         }
-        //console.log(query)
         return query
     },
-    async addUser(req,res){
+    async addUser(req, res) {
         try {
             const resultado = await database.sync();
             const insertData = await usersData.create({
@@ -60,12 +57,9 @@ module.exports = {
                 office: req.subscribeOffice,
                 bio: req.subscribebio,
                 password: req.subscribePassword,
-        })
-
-        //console.log(insertData)
-    } catch (error) {
-        console.log(error);
-    }
+            })
+        } catch (error) {
+            console.log(error);
+        }
     }
 }
- 
