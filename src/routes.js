@@ -91,6 +91,10 @@ routes.post('/pesquisa/:userSearch/:userData', async (req,res) => {
   }
 
 
+    console.log(res.search.length)
+
+
+
 
 res.render('catalogo', {id: `${id}`, name: `${name}`, tag: `${tag}`, office: `${office}`, userName: `${userData.name}`, userEmail: `${userData.email}`, picture: `${picture}`, email: `${email}`, gender: `${gender}`})
 })

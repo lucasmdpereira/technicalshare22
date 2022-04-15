@@ -78,6 +78,8 @@
 <script src="/scripts/pesquisa.js"></script>
 
 <script>
+
+console.log('INFO => ****')
     let names = `<%-name%>`
     names = names.split(',')
     let id = `<%-id%>`
@@ -94,8 +96,9 @@
     gender = gender.split(',')
     let injectHTML = document.querySelector('.center__down')
 
+  
 
-    if(names.length > 0){
+    if(`<%-name%>`.length > 0){
     for (let i = 0; i < names.length; i++) {
         injectHTML.innerHTML += `            <div class="perfil__card">
     <div class="card__top">
