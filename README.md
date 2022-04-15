@@ -31,7 +31,10 @@
 <h3>🏆 Conquistas e desafios encontrados</h3>
 <ul>
   <li>Frontend e Backend desenvolvido ao longo de 15 dias</li>
-  <li>Devido a erro na distribuição dos squad, esse projeto foi inteiramente desenvolvido por 3 UXs e somente 1 DEV (as equipes forma dividades em 4 ou 5 devs)</li>
+  <li>Devido a erro na distribuição dos times, esse projeto foi inteiramente desenvolvido por 3 UXs e somente 1 DEV (as equipes foram divididas em 4 ou 5 devs)</li>
+  <li>Uso de metodologias ágeis e sprints</li>
+  <li>Frontend finalizado</li>
+  <li>Backend para barra de pesquisa inteligente finalizado. A pesquisa é capaz de encontrar nomes, cargos ou tag, inclusive pesquisando mais de um termo. Por ex: ```node moraes ux``` ira localizar todas as pessoas que possuem node como tag, mais todas as pessoas tenham moraes no nome mas todas as pessoas que possuam cargo de ux.</li>
 </ul>
 
 

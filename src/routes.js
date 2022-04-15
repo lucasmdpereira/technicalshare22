@@ -68,9 +68,11 @@ routes.get('/perfil/:user/:email', (req, res) => {
 //pesquisa
 routes.post('/pesquisa/:userSearch/:userData', async (req,res) => {
   
+  
   userData = JSON.parse(req.params.userData)
+  
   res = await searchController.search(req, res)
-
+ 
   let id = []
   let name = []
   let tag = []
@@ -87,6 +89,8 @@ routes.post('/pesquisa/:userSearch/:userData', async (req,res) => {
     email[i] = res.search[i].email
     gender[i] = res.search[i].gender
   }
+
+
 
 res.render('catalogo', {id: `${id}`, name: `${name}`, tag: `${tag}`, office: `${office}`, userName: `${userData.name}`, userEmail: `${userData.email}`, picture: `${picture}`, email: `${email}`, gender: `${gender}`})
 })

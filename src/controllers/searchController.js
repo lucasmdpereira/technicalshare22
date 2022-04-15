@@ -8,6 +8,7 @@ module.exports = {
         let searchFound
         let tagsNamesOfficeIds = await services.tagsNamesOfficeIds()
 
+
         if (search == 'all') {
             res.search = tagsNamesOfficeIds
         } else {
@@ -27,11 +28,15 @@ module.exports = {
                     isIncludeTag = tagsNamesOfficeIds[i].tag.toLowerCase().includes(`${search[j]}`)
                     isIncludeName = tagsNamesOfficeIds[i].name.toLowerCase().includes(`${search[j]}`)
                     isIncludeOffice = tagsNamesOfficeIds[i].office.toLowerCase().includes(`${search[j]}`)
-                    if (isIncludeTag === true || isIncludeName === true || isIncludeOffice === true) found = 'true'
+                    if (isIncludeTag === true) found = 'true'
+                    if (isIncludeName === true)
+                    found = 'true'
+                    if(isIncludeOffice === true) found = 'true'
 
                     if (found == 'true') {
                         ids[k] = tagsNamesOfficeIds[i]
                         k++
+                    
                     }
                 }
             }

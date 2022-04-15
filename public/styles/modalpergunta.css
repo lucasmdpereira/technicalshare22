@@ -1,6 +1,20 @@
+
 .modal-wrapper__pergunta.active{
     visibility: visible;
     opacity: 1;
+}
+
+.resposta__body.active{
+    visibility: visible;
+    opacity: 1;
+    height: auto;
+    margin-bottom: 4.5rem;
+}
+
+.resposta__body{
+    visibility: hidden;
+    opacity: 0;
+    height: 0; 
 }
 
 .modal-wrapper__pergunta{
@@ -77,7 +91,7 @@
 .modal__pergunta form{
     display: flex;
     flex-direction: column;
-    padding: 3.125rem;
+    padding: 0 3.125rem  3.125rem  3.125rem;
 }
 
 .modal__pergunta textarea{
@@ -123,5 +137,16 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
+}
+
+.resposta__body{
+    display: flex;
+    margin: 4.5rem 4.5625rem 0 4.5625rem;
+    
+}
+
+.resposta__body .body__text{
+    text-align: right;
+    margin-right:1.5625rem ;
 }
 

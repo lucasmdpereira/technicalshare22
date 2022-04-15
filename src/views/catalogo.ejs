@@ -78,8 +78,8 @@
 <script src="/scripts/pesquisa.js"></script>
 
 <script>
-    let name = `<%-name%>`
-    name = name.split(',')
+    let names = `<%-name%>`
+    names = names.split(',')
     let id = `<%-id%>`
     id = id.split(',')
     let tag = `<%-tag%>`
@@ -94,8 +94,9 @@
     gender = gender.split(',')
     let injectHTML = document.querySelector('.center__down')
 
-    if(name.length > 1){
-    for (let i = 0; i < name.length; i++) {
+
+    if(names.length > 0){
+    for (let i = 0; i < names.length; i++) {
         injectHTML.innerHTML += `            <div class="perfil__card">
     <div class="card__top">
         <img src="/uploads/${picture[i]}" alt="">
@@ -103,7 +104,7 @@
     <div class="card__bottom">
         <div class="bottom__personal">
             <div class="personal__title">
-                <h2>${name[i]}</h2>
+                <h2>${names[i]}</h2>
                 <h3>${office[i]}</h3>
             </div>
             <div class="personal__gender">
