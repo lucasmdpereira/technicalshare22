@@ -7,6 +7,7 @@
     <title>Technical Share</title>
 
     <link rel="stylesheet" href="/styles/home.css">
+    <link rel="stylesheet" href="/styles/modal.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -108,21 +109,124 @@
 
         <div class="right__container">
             <h2>Notificações</h2>
-            <div class="pop">
-                <img src="/images/pop_picture.svg" alt="">
-                <div class="pop__text">
-                    <h3>Anderson Busdek</h3>
-                    <p>Lorem ipsun santi avec tude proc van...</p>
-                </div>
-            </div>
+
 
         </div>
 
 
     </section>
 
+    <div class="modal-wrapper">
+        <div class="modal">
+            <div class="modal__header">
+                <h2 id="modalTitulo"></h2>
+            </div>
+            <div class="modalinject">
+
+                
+                    
+                      
+                        
+                        
+                    </div>
+                </div>
+                    <div class="modal__responder">
+                        <form action="">
+                            <textarea rows="5" cols="50">
+                </textarea>
+                <button>Enviar</button>
+            </form>
+        </div>
+    </div>
+
+
 </body>
 
 <script src="/scripts/pesquisa.js"></script>
+
+
+<script>
+
+let idQuestion = `<%-idQuestion%>`
+idQuestion = idQuestion.split(',')
+
+let quemPerguntou = `<%-quemPerguntou%>`
+quemPerguntou = quemPerguntou.split(',')
+
+let historico = `<%-historico%>`
+historico = historico.split('],[')
+//console.log(historico.length)
+for (let i = 0; i < historico.length; i++){
+    if(i == 0){
+        historico[i] = `${historico[i]}` + "]"
+        historico[i] = JSON.parse(historico[i])
+    }   else{
+            if(i == historico.length-1){
+                historico[i] = "[" + `${historico[i]}`
+                historico[i] = JSON.parse(historico[i])
+            }   else{
+                    historico[i] = "[" + `${historico[i]}` + "]"
+                    historico[i] = JSON.parse(historico[i])
+                }
+        }
+}
+
+// console.log(idQuestion)
+// console.log(quemPerguntou)
+// console.log(historico)
+
+let injectHTML = document.querySelector('.right__container')
+
+    for (let i = 0; i < idQuestion.length; i++){
+      injectHTML.innerHTML +=`
+            <div class="pop">
+                <img src="/uploads/profilepicture-${quemPerguntou[i]}.svg" alt="">
+                <div class="pop__text">
+                    <h3>${quemPerguntou[i]}</h3>
+                    <p>Te fez uma pergunta!!</p>
+                </div>
+                <div id="${[i]}" class="por__ver">Ver</div>
+            </div>
+
+        </div>`}
+
+let verButton = document.querySelectorAll('.por__ver')
+injectHTML = document.querySelector('.modalinject')
+
+for (let i = 0; i < verButton.length; i++){
+    verButton[i].addEventListener("click", function(){
+        let id = verButton[i].id
+        console.log(id)
+        document.querySelector('#modalTitulo').textContent = `Sua conversa com ${quemPerguntou[id]}`
+
+        console.log(historico[id].length)
+        for(let i = 0; i < historico[id].length; i++){
+            console.log(historico[id][i])
+            injectHTML.innerHTML += `<div class="modal__historico">
+                    <p>${historico[id][i].texto}</p>
+                    <div class="modal__autor">
+                        <div class="avatar">
+                            <img src="./images/pop_picture.svg" alt="">
+                            <h3>${historico[id][i].de}</h3>
+                        </div>
+                    </div>  `
+        }
+
+  
+
+        document.querySelector('.modal-wrapper').classList.add("active")
+    })
+}
+
+
+
+    // document.querySelector('#modalTitulo').textContent = `Sua conversa com ${quemPerguntou[id]}`
+
+
+
+    // document.querySelector('.modal-wrapper').classList.add("active")
+
+
+</script>
 
 </html>

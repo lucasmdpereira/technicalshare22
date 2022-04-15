@@ -1,0 +1,44 @@
+
+let reqQuemFoiPerguntado = `<%-reqQuemFoiPerguntado%>`
+reqQuemFoiPerguntado = reqQuemFoiPerguntado.split(',')
+let reqQuemPerguntou = `<%-reqQuemPerguntou%>`
+reqQuemPerguntou = reqQuemPerguntou.split(',')
+
+
+console.log(reqQuemFoiPerguntado)
+console.log(reqQuemPerguntou)
+
+
+// let reqhistorico = `<%-reqhistorico%>`
+// reqhistorico = reqhistorico.split('],[')
+// for (let i = 0; i < reqhistorico.length; i++ )
+// {
+//     if(i % 2 == 0) {
+//         reqhistorico[i] = `${reqhistorico[i]}]`
+//         reqhistorico[i] = JSON.parse(reqhistorico[i])
+// }   else {
+//         reqhistorico[i] = `[${reqhistorico[i]}`
+//         reqhistorico[i] = JSON.parse(reqhistorico[i])
+// }  
+// }
+// console.log(reqhistorico)
+// let lastmsg = reqhistorico[0].length - 1
+// console.log(lastmsg)
+// console.log(reqhistorico[0][`${lastmsg}`])
+
+// reqhistorico = `${reqhistorico[0]}]`
+
+// let lastmsg = reqhistorico.length
+
+// console.log(JSON.parse(reqhistorico))
+
+let injectHTML = document.querySelector('.right__container')
+
+    for (let i = 0; i < reqQuemFoiPerguntado.length; i++){
+      injectHTML.innerHTML +=`            <div class="pop">
+                <img src="/uploads/profilepicture-${reqQuemPerguntou[i]}.svg" alt="">
+                <div class="pop__text">
+                    <h3>${reqQuemPerguntou[i]}</h3>
+                    <p>Nova mensagem de ${reqQuemPerguntou[i]}</p>
+                </div>
+            </div>`}

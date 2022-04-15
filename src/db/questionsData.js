@@ -1,33 +1,29 @@
 const Sequelize = require('sequelize');
-const database = require('./dbUsers');
+const database = require('./dbQuestions');
  
-const createTable = database.define('users', {
+const createTable = database.define('questions', {
     idQuestion: {
         type: Sequelize.INTEGER,
         autoIncrement: true,
         allowNull: false,
         primaryKey: true
     },
-    question: {
+    quemFoiPerguntado: {
         type: Sequelize.STRING,
-        allowNull: false,
+        allowNull: true,
     },
-    IdUserAskedFor: {
+    quemPerguntou: {
         type: Sequelize.INTEGER,
-        allowNull: false,
+        allowNull: true,
     },
-    IdUserAskingFor: {
+    historico: {
         type: Sequelize.INTEGER,
-        allowNull: false,
+        allowNull: true,
     },
-    // response000:{
-    //     type: Sequelize.STRING,
-    //     allowNull: true,
-    // },
-    // IdUserReply000: {
-    //     type: Sequelize.INTEGER,
-    //     allowNull: true,
-    // },
+    ativa: {
+        type: Sequelize.INTEGER,
+        allowNull: true,
+    }
 })
  
 module.exports = createTable;

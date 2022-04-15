@@ -24,46 +24,11 @@ const createTable = database.define('users', {
         type: Sequelize.STRING,
         allowNull: false,
         unique: true
+        
     },
     office:{
         type: Sequelize.STRING,
         allowNull: false,
-    },
-    picture:{
-        type: Sequelize.STRING,
-        allowNull: false,
-     },
-    market_saude:{
-        type: Sequelize.STRING,
-        allowNull: true,
-    },
-    market_industria:{
-        type: Sequelize.STRING,
-        allowNull: true,
-    },
-    market_publico:{
-        type: Sequelize.STRING,
-        allowNull: true,
-    },
-    market_banking:{
-        type: Sequelize.STRING,
-        allowNull: true,
-    },
-    market_varejo:{
-        type: Sequelize.STRING,
-        allowNull: true,
-    },
-    market_educacao:{
-        type: Sequelize.STRING,
-        allowNull: true,
-    },
-    market_finance:{
-        type: Sequelize.STRING,
-        allowNull: true,
-    },
-    market_seguros:{
-        type: Sequelize.STRING,
-        allowNull: true,
     },
     bio:{
         type: Sequelize.STRING,
@@ -72,7 +37,11 @@ const createTable = database.define('users', {
     password:{
         type: Sequelize.STRING,
         allowNull: false,
-    }
+    },
+    picture:{
+        type: Sequelize.STRING,
+        allowNull: false,
+     }
 })
  
 module.exports = createTable;

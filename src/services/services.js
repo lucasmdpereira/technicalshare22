@@ -1,5 +1,7 @@
+const { response } = require('express');
 const database = require('../db/dbUsers'); 
 const usersData = require('../db/usersData');
+const questionsData = require('../db/questionsData');
 
 module.exports = {
     async queryUserDBCredentials(unauthenticatedUserEmail){
@@ -55,18 +57,9 @@ module.exports = {
                 tag: req.subscribeTags,
                 email: req.subscribeEmail,
                 picture: req.picture,
-                market_saude: req.market_saude,
-                market_industria: req.market_industria,
-                market_publico: req.market_publico,
-                market_banking: req.market_banking,
-                market_varejo: req.market_varejo,
-                market_educacao: req.market_educacao,
-                market_finance: req.market_finance,
-                market_seguros: req.market_seguros,
                 office: req.subscribeOffice,
                 bio: req.subscribebio,
                 password: req.subscribePassword,
-                picture: 0
         })
 
         //console.log(insertData)
@@ -74,7 +67,45 @@ module.exports = {
         console.log(error);
     }
     },
+    async ultimasPerguntas(req, res){
+        try{
 
+            //console.log('INFO*** =>')
+            //console.log(req.user)
+            
+            await database.sync();
+            //recebe ultimas perguntas feitas a mim
+            let perguntas = await questionsData.findAll({ limit: 3, order: [['idQuestion', 'DESC']],
+                where: {
+                    quemFoiPerguntado: `${(req.user)}`
+                }
+            })
+            res.perguntas = perguntas
+            //console.log('INFO*** services =>')
+            //console.log(res.perguntas)
+
+            // let user =  req.user
+
+            // //console.log(user)
+            // await database.sync();
+            // query = await questionsData.findAll({ limit: 2, order: [['updatedAt', 'DESC']]},{
+            //     where: {
+            //         quemPerguntou: `${user}`
+            //     }
+            // })
+            // //console.log(query)
+            // res.euPerguntei = query
+            // query2 = await questionsData.findAll({ limit: 2, order: [['updatedAt', 'DESC']]},{
+            //     where: {
+            //         quemFoiPerguntado: `${user}`
+            //     }
+            // })
+            // res.fuiPerguntado = query2
+        }   catch (error) {
+            console.log(error);
+            }
+        return res
+    },
 
 }
  

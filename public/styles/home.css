@@ -313,22 +313,45 @@ body, html{
     display: flex;
     align-items: center;
     padding: 0.875rem;
+    margin-bottom: 1rem;
 }
 
 .pop img{
+    width: 2.8125rem;
+    height: 2.8125rem;
+    border-radius: 2.8125rem;
     margin-right: 0.875rem;
 }
 
-.pop h3{
+.pop__text{
+    flex: 1;
+}
+
+
+.pop__text h3{
     font-family: 'Rubik';
     font-style: normal;
     font-weight: 600;
     font-size: 1rem;
 }
 
-.pop p{
+.pop__text p{
     font-family: 'Rubik';
     font-style: normal;
     font-weight: 400;
     font-size: 0.8125rem;
+}
+
+.por__ver{
+    width: 3.375rem;
+    height: 1.75rem;
+    background-color: orangered;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.3125rem;
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 1rem;    
+    color: #FBFBFB;
 }
