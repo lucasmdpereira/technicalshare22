@@ -116,7 +116,6 @@
 <script src="/scripts/pesquisa.js"></script>
 
 <script>
-
     let name = `<%-name%>`
     name = name.split(',')
     let id = `<%-id%>`
@@ -131,9 +130,7 @@
     email = email.split(',')
     let gender = `<%-gender%>`
     gender = gender.split(',')
-
     let injectHTML = document.querySelector('.center__down')
-
     for (let i = 0; i < name.length; i++){
       injectHTML.innerHTML += `            <div class="perfil__card">
     <div class="card__top">
@@ -151,7 +148,6 @@
         </div>
         <div class="tag__button">
             <div class="personal__tags personal__tags${i}">
-
             </div>
             <a class="seeButton" href="">Ver perfil</a>
         </div>
@@ -159,24 +155,13 @@
 </div>`
   
   tag[i] = tag[i].split(';')
-
   let injectTags = document.querySelector(`.personal__tags${i}`)
-
   for (let j = 0; j < tag[i].length; j++){
-
   injectTags.innerHTML += `<p>${tag[i][j]}</p>`
   }
-
-
     }
-
-
     console.log(tag)
  
-
-
-
-
     
      
     

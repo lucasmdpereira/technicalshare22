@@ -37,7 +37,7 @@ module.exports = {
         try{
             await database.sync();
             query = await usersData.findAll({
-                attributes: ['id', 'tag', 'name','office','picture','email', 'gender']
+                attributes: ['id', 'tag', 'name','office','picture','email']
             })
         }   catch (error) {
             console.log(error);
@@ -66,46 +66,6 @@ module.exports = {
     } catch (error) {
         console.log(error);
     }
-    },
-    async ultimasPerguntas(req, res){
-        try{
-
-            //console.log('INFO*** =>')
-            //console.log(req.user)
-            
-            await database.sync();
-            //recebe ultimas perguntas feitas a mim
-            let perguntas = await questionsData.findAll({ limit: 3, order: [['idQuestion', 'DESC']],
-                where: {
-                    quemFoiPerguntado: `${(req.user)}`
-                }
-            })
-            res.perguntas = perguntas
-            //console.log('INFO*** services =>')
-            //console.log(res.perguntas)
-
-            // let user =  req.user
-
-            // //console.log(user)
-            // await database.sync();
-            // query = await questionsData.findAll({ limit: 2, order: [['updatedAt', 'DESC']]},{
-            //     where: {
-            //         quemPerguntou: `${user}`
-            //     }
-            // })
-            // //console.log(query)
-            // res.euPerguntei = query
-            // query2 = await questionsData.findAll({ limit: 2, order: [['updatedAt', 'DESC']]},{
-            //     where: {
-            //         quemFoiPerguntado: `${user}`
-            //     }
-            // })
-            // res.fuiPerguntado = query2
-        }   catch (error) {
-            console.log(error);
-            }
-        return res
-    },
-
+    }
 }
  

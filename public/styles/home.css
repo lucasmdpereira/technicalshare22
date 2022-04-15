@@ -13,7 +13,7 @@ a{
 
 body, html{
     width: 100%;
-    height: auto;
+    height: 100%;
     display: flex;
     justify-content: space-between;
 }
@@ -21,7 +21,7 @@ body, html{
 .left{
     flex: 0.20;
     background-color: #FBFBFB;
-    height: 100%;
+
 }
 
 .sidebar__container{
@@ -116,7 +116,6 @@ body, html{
 
 .center{
     flex: 0.6;
-    width: 100%;
 }
 
 .center__container{

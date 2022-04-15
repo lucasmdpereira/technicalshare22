@@ -4,7 +4,7 @@ const searchController = require('./controllers/searchController')
 const services = require('./services/services')
 const multer = require('multer')
 const path = require('path');
-const questionsController = require('./controllers/questionsController')
+
 const routes = express.Router()
 
 //middleware
@@ -21,24 +21,11 @@ routes.post('/home/:user', async (req, res) => {
     //console.log("Requisição de login:")
     //console.log(req)
     res = await loginController.authenticate(req, res)
-
-    req.user = req.params.user
-    let ultimasPerguntas = await questionsController.ultimasPerguntas(req, res)
- 
-    console.log('INFO*** routes =>')
-    console.log(ultimasPerguntas)
-    
-    let idQuestion = ultimasPerguntas.idQuestion
-    let quemPerguntou = ultimasPerguntas.quemPerguntou
-    let historico = ultimasPerguntas.historico
-  
-
-
-    //console.log(reqhistorico)
-
+    //console.log(res.continue)
+    //console.log(res)
     if (res.continue == 'true') {
         console.log("100: Usuário autenticado")
-        res.render('home', {userName: `${res.name}`, userEmail: `${res.email}`, ultimasPerguntas: `${ultimasPerguntas}`,idQuestion: `${idQuestion}`, quemPerguntou:  `${quemPerguntou}`,historico: `${historico}`})
+        res.render('home', {userName: `${res.name}`, userEmail: `${res.email}`})
     }
     if (res.continue == 'false') {
         console.log("404: Not found")
@@ -121,12 +108,6 @@ routes.get('/pesquisa/:userSearch/:userData', async (req,res) => {
   //console.log(picture)
 
 res.render('catalogo', {id: `${id}`, name: `${name}`, tag: `${tag}`, office: `${office}`, userName: `${userData.name}`, userEmail: `${userData.email}`, picture: `${picture}`, email: `${email}`, gender: `${gender}`})
-})
-
-routes.get('/question/:userData', async (req, res) => {
-  req.user = req.params.userData
-  res = await questionsController.myQuestions(req, res)
-  console.log(res)
 })
 
 
