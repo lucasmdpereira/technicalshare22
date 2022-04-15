@@ -210,3 +210,7 @@
 .agendado{
     background-color: #00A023 !important;
 }
+
+textarea{
+    resize: none;
+}

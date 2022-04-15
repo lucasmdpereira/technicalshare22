@@ -3,7 +3,6 @@
     padding: 0;
     box-sizing: border-box;
     list-style-type: none;
-  
 }
 
 a{
@@ -16,12 +15,14 @@ body, html{
     height: auto;
     display: flex;
     justify-content: space-between;
+    
 }
 
 .left{
     flex: 0.20;
     background-color: #2A2962;
     height: 100%;
+    padding-bottom: 50rem;
 }
 
 .sidebar__container{
@@ -31,7 +32,6 @@ body, html{
     flex-direction: column;
     color:#FBFBFB;
     align-items: center;
-    box-shadow: 0px 4px 34px rgba(2, 1, 75, 0.5);
 }
 
 .sidebar__header{
@@ -103,10 +103,14 @@ body, html{
 }
 
 .menu__user {
-    padding-bottom: 3.75rem;
-
+    justify-self: flex-end;
+    padding-top: 20rem;
 }
 
 .menu__user p {
     text-align: center;
+}
+
+#userName, #userEmail{
+    color: #2A2962;
 }
