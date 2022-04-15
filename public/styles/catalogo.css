@@ -1,120 +1,5 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    list-style-type: none;
-
-}
-
-a {
-    all: unset;
-    cursor: pointer;
-}
-
-body,
-html {
-    width: 100%;
-    height: auto;
-    display: flex;
-}
-
-.left {
-    width: 16.5625rem;
-    background-color: #FBFBFB;
-    height: 100%;
-}
-
-.sidebar__container {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    color: #2A2962;
-    align-items: center;
-    box-shadow: 0px 4px 34px rgba(2, 1, 75, 0.5);
-}
-
-.sidebar__header {
-    padding-top: 3.75rem;
-    padding-bottom: 4.375rem;
-    display: flex;
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 1.25rem;
-    display: flex;
-    align-items: center;
-}
-
-.sidebar__header .logo {
-    width: 1.875rem;
-    height: 1.875rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 0.9375rem;
-    background-color: orangered;
-    border-radius: 1.875rem 0rem 1.875rem 1.875rem;
-    font-size: 1.5rem;
-    font-weight: 800;
-    color: #FBFBFB;
-}
-
-.sidebar__menu {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.sidebar__menu ul {
-    width: 100%;
-    align-self: flex-start;
-}
-
-.sidebar__menu ul li {
-    height: 3.5rem;
-    display: flex;
-    align-items: center;
-    margin-bottom: 1.5rem;
-    border-left: 0rem solid #2A2962;
-    transition: 0.5s;
-    transition-timing-function: ease-out;
-
-}
-
-.sidebar__menu ul li:hover {
-    border-left: 1rem solid #2A2962;
-    opacity: 1;
-    transition: 0.5s;
-    transition-timing-function: ease-in-out;
-}
-
-.sidebar__menu ul li img {
-    padding: 0 1rem;
-    color: #2A2962;
-}
-
-.menu__home,
-.menu__sanguesLaranja,
-.menu__perfil,
-.menu__user {
-    font-family: 'Rubik';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 1rem;
-    opacity: 0.4;
-}
-
-.menu__user {
-    padding-bottom: 3.75rem;
-    ;
-}
-
 .center {
-    flex: 1;
+    flex: 0.9;
 }
 
 .center__container {
@@ -187,6 +72,7 @@ html {
 
 .center__down {
     padding: 3.375rem 0;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;

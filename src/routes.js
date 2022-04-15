@@ -12,7 +12,20 @@ routes.use(express.json())
 //Tela de login
 routes.get('/', (req, res) => res.render("login"))
 
-//perfil
+//perfil outros usuários
+routes.get('/profissional/:user/:email', (req, res) => {
+
+  let user = req.params.user
+  let email = req.params.email
+
+  res.render('profissional', {userName: `${user}`,userEmail: `${email}`})
+})
+
+
+
+
+
+//home
 routes.post('/home/:user', async (req, res) => {
 
     res = await loginController.authenticate(req, res)
@@ -27,12 +40,29 @@ routes.post('/home/:user', async (req, res) => {
 
 })
 
+//perfil próprio
+routes.get('/perfil/:user/:email', (req, res) => {
+
+  let user = req.params.user
+  let email = req.params.email
+
+  res.render('perfil', {userName: `${user}`,userEmail: `${email}`})
+})
+
  routes.get('/home/:user/:email', async (req, res) => {
-   console.log(req)
+ 
    let user = req.params.user
    let email = req.params.email
 
    res.render('home', {userName: `${user}`,userEmail: `${email}`})
+ })
+
+ routes.get('/perfilcomagenda/:user/:email', (req, res) => {
+  let user = req.params.user
+  let email = req.params.email
+
+  res.render('perfilcomagenda', {userName: `${user}`,userEmail: `${email}`})
+
  })
 
 //pesquisa

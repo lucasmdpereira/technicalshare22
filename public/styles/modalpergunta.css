@@ -1,0 +1,127 @@
+.modal-wrapper__pergunta.active{
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal-wrapper__pergunta{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    display: flex;
+
+    background: rgba(4, 9, 17, .8);
+
+    visibility: hidden;
+    opacity: 0;
+}
+
+.modal-wrapper__pergunta .modal__pergunta{
+    width: 53.125rem;
+    background: #FFF;
+    margin: auto;
+    border-radius: 1.25rem;
+}
+
+.modal__pergunta{
+    display: flex;
+    flex-direction: column;
+}
+
+.pergunta__header{
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.pergunta__header p{
+    background-color: orangered;
+    border-radius:0   1.25rem 0 0;
+    padding: 0.625rem 2.21875rem ;
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: 0.75rem;
+    color: #F3F6FF;
+}
+
+.pergunta__body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2.5625rem 4.5625rem 0 4.5625rem;
+}
+
+.body__who{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    gap: 0.5625rem;
+    font-family: 'Rubik';
+    font-weight: 700;
+    font-size: 0.75rem;
+    color: #5D6165;
+    margin-right: 1.5625rem;
+}
+
+.body__text{
+    font-family: 'Rubik';
+    font-weight: 400;
+    font-size: 0.75rem;
+    text-align: left;
+    color: #4E4E4E;
+}
+
+.modal__pergunta form{
+    display: flex;
+    flex-direction: column;
+    padding: 3.125rem;
+}
+
+.modal__pergunta textarea{
+    border: none;
+    background: #F6F6F9;
+    border-radius: 0.625rem;
+}
+
+.body__buttons{
+    display: flex;
+    justify-content: flex-end;
+    margin: 3.125rem 0 0 3.125rem;
+    gap: 3.5rem;
+}
+
+.button__cancelar{
+    width: 7.5rem;
+    border: 2px orangered solid;
+    padding: 0.625rem;
+    border-radius: 0.625rem;
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: 1rem;  
+    color: orangered;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.button__enviar{
+    width: 7.5rem;
+    border: 2px orangered solid;
+    padding: 0.625rem;
+    padding: 0.625rem;
+    border-radius: 0.625rem;
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: 1rem;  
+    color: #FDFDFD;
+    background-color: orangered;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+

@@ -11,7 +11,7 @@
         const emails = ['pedro@ayuda', 'juninho@jr', 'alf@deet', 'roberta@hermes', 'michael@scott'];
         const offices = ['Dev Senior', 'Trainee', 'UX', 'Analista de RH', 'Best boss']
         const passwords = ['pedro', 'juninho', 'alf', 'roberta', 'michael'];
-        const tags = ['node.js;scrum master;java', 'node.js;scrum master;javascript ', 'node.js;scrum master;java ', 'node.js;scrum master;javascript ', 'po']
+        const tags = ['node.js;scrum master;java', 'node.js;scrum master;javascript ', 'node.js;scrum master;java ', 'node.js;scrum master;javascript ', 'product owner']
         const pictures = ['profilepicture-pedro@ayuda.svg', 'profilepicture-juninho@jr.svg', 'profilepicture-alf@deet.svg', 'profilepicture-roberta@hermes.svg', 'profilepicture-michael@scott.svg']
 
         for (let i = 0; i < names.length; i++) {

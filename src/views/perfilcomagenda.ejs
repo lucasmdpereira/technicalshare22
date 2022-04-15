@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Share</title>
+
+    <link rel="stylesheet" href="/styles/perfil_proprio.css">
+    <link rel="stylesheet" href="/styles/sidebar.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    <section class="left">
+        <div class="sidebar__container">
+            <div class="sidebar__header">
+                <div class="logo">
+                    <img src="/images/logo_techinalShare.svg" alt="">
+                </div>
+            </div>
+            <div class="sidebar__menu">
+                <ul>
+                    <a href="/home/<%=userName%>/<%=userEmail%>">
+                        <li class="menu__home">
+                            <img src="/images/home.svg" alt=""> Home</li>
+                    </a>
+                    <a id="sangueLaranja" href="">
+                        <li class="menu__sanguesLaranja">
+                            <img src="/images/people.svg" alt=""> Sangues laranja</li>
+                    </a>
+                    <a href="">
+                        <li class="menu__perfil">
+                            <img src="/images/perfil.svg" alt="">  Perfil
+                        </li>
+                    </a>
+                </ul>
+                <div class="menu__user">
+                    <p id="userName"><%=userName%></p>
+                    <p id="userEmail"><%=userEmail%></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main class="center">
+        <div class="center__container">
+            <div class="center__header">
+                <img src="/images/perfil_proprio.svg" alt="">
+                <div class="header__info">
+                    <div class="info__header">
+                        <h2>Amanda Flores</h2>
+                        <h3>UX DESIGNER</h3>
+                        <p>ela/dela</p>
+                    </div>
+                    <div class="header__tags">
+                        <p>UX</p>
+                        <p>UI</p>
+                        <p>Figma</p>
+                        <p>Design Thinking</p>
+                        <p>Research</p>
+                    </div>
+                    <div class="header__others">
+                        <div class="others__verticais">
+                            <h3>VERTICAIS</h3>
+                            <p>Saude</p>
+                        </div>
+                        <div class="others__clientes">
+                            <h3>CLIENTES</h3>
+                            <p>WelcomeApp</p>
+                        </div>
+               
+                    </div>
+                </div>
+            </div>
+            <div class="center__bio">
+                <h2>SOBRE MIM</h2>
+                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis et expedita distinctio</p>
+            </div>
+            <div class="agenda">
+                <h2>HORÁRIOS PARA MENTORIA</h2>
+                <div class="agenda__container">
+
+                    <div class="agenda__pop">
+                        <div class="pop__date">
+                            <p>Dia</p>
+                            <h3>09</h3>
+                        </div>
+                        <div class="pop_text">
+                            <p>Disponibilidade das <strong>15h00</strong> até <strong>16h30</strong></p>
+                        </div>
+                        <img src="/images/x.svg" alt="">
+                    </div>
+                    <a class="pop__agendar"><img src="/images/plus.svg" alt=""></a>
+                    
+                </div>
+            </div>
+
+
+        </div>
+    </main>
+
+
+
+
+</body>
+
+<script src="/scripts/perfil.js"></script>
+
+<script>
+    let userData = {}
+    let userName = document.querySelector('#userName').textContent
+    let userEmail = document.querySelector('#userEmail').textContent
+
+    userData.name = userName
+    userData.email = userEmail
+
+    userData = JSON.stringify(userData)
+    
+    document.querySelector('#sangueLaranja').href = `/pesquisa/all/${userData}`
+
+
+</script>
+
+
+</html>

@@ -8,6 +8,7 @@
     <title>Technical Share</title>
 
     <link rel="stylesheet" href="/styles/catalogo.css">
+    <link rel="stylesheet" href="/styles/sidebar.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,9 +24,8 @@
         <div class="sidebar__container">
             <div class="sidebar__header">
                 <div class="logo">
-                    F
+                    <img src="/images/logo_techinalShare.svg" alt="">
                 </div>
-                <p>Technical Share</p>
             </div>
             <div class="sidebar__menu">
                 <ul>
@@ -35,11 +35,11 @@
                     </a>
                     <a id="sangueLaranja" href="">
                         <li class="menu__sanguesLaranja">
-                            <img src="/images/sangue.svg" alt=""> Sangues laranja</li>
+                            <img src="/images/people.svg" alt=""> Sangues laranja</li>
                     </a>
-                    <a href="">
+                    <a href="/perfil/<%=userName%>/<%=userEmail%>">
                         <li class="menu__perfil">
-                            <img src="/images/people.svg" alt=""> Perfil
+                            <img src="/images/perfil.svg" alt=""> Perfil
                         </li>
                     </a>
                 </ul>
@@ -113,7 +113,7 @@
         <div class="tag__button">
             <div class="personal__tags personal__tags${i}">
             </div>
-            <a class="seeButton" href="">Ver perfil</a>
+            <a class="seeButton" href="/profissional/<%=userName%>/<%=userEmail%>">Ver perfil</a>
         </div>
     </div>
 </div>`
@@ -133,6 +133,19 @@
 }
 </script>
 
+<script>
+    let userData = {}
+    let userName = document.querySelector('#userName').textContent
+    let userEmail = document.querySelector('#userEmail').textContent
 
+    userData.name = userName
+    userData.email = userEmail
+
+    userData = JSON.stringify(userData)
+    
+    document.querySelector('#sangueLaranja').href = `/pesquisa/all/${userData}`
+
+
+</script>
 
 </html>

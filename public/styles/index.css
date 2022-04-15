@@ -23,11 +23,7 @@ html {
 }
 
 .logo {
-    width: 1.875rem;
-    height: 1.875rem;
-    background-color: gray;
-    border-radius: 1.875rem;
-    margin-top: 3.75rem;
+   margin-top: 3.75rem;
 }
 
 .center {
@@ -37,6 +33,7 @@ html {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+   
 }
 
 .center h1 {
@@ -44,6 +41,7 @@ html {
     font-weight: 800;
     font-size: 3rem;
     margin-bottom: 2.5rem;
+    color: #6263AB;
 }
 
 .loginForm {
@@ -121,6 +119,7 @@ html {
 .article {
     flex: 0.75;
     display: flex;
+    
 }
 
 .left_line {
@@ -132,12 +131,16 @@ html {
     justify-content: space-between;
     margin-bottom: 9rem;
     padding-left: 2.0625rem;
+    
 }
 
 .right_line {
     margin-left: 0.625rem;
     display: flex;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    gap: 7.125rem;
     margin-bottom: 9rem;
     padding-right: 2.0625rem;
 }
@@ -150,6 +153,16 @@ p {
 
 .login_error {
     color: red;
+    text-align: center;
+    margin-top: 1rem;
+    height: 2rem;
+}
+
+.cadastro{
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 1rem;
+    color: #2A2962;
     text-align: center;
     margin-top: 1rem;
     height: 2rem;

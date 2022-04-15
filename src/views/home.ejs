@@ -8,6 +8,8 @@
     <title>Technical Share</title>
 
     <link rel="stylesheet" href="/styles/home.css">
+    <link rel="stylesheet" href="/styles/sidebar.css">
+    <link rel="stylesheet" href="/styles/modalpergunta.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,9 +24,8 @@
         <div class="sidebar__container">
             <div class="sidebar__header">
                 <div class="logo">
-                    F
+                    <img src="/images/logo_techinalShare.svg" alt="">
                 </div>
-                <p>Technical Share</p>
             </div>
             <div class="sidebar__menu">
                 <ul>
@@ -34,11 +35,11 @@
                     </a>
                     <a id="sangueLaranja" href="">
                         <li class="menu__sanguesLaranja">
-                            <img src="/images/sangue.svg" alt=""> Sangues laranja</li>
+                            <img src="/images/people.svg" alt=""> Sangues laranja</li>
                     </a>
-                    <a href="">
+                    <a href="/perfil/<%=userName%>/<%=userEmail%>">
                         <li class="menu__perfil">
-                            <img src="/images/people.svg" alt=""> Perfil
+                            <img src="/images/perfil.svg" alt=""> Perfil
                         </li>
                     </a>
                 </ul>
@@ -79,10 +80,25 @@
                             <p>Das 13h00 às 14h30</p>
                         </div>
                         <div class="who">
-                            <img src="/images/small_picture.svg" alt="">
+                            <img src="/images/small_picture.svg"alt="">
                             <p>Gabriel Almeida</p>
                         </div>
                     </div>
+
+                    <div class="card">
+                        <div class="date">
+                            <p>Dia</p>
+                            <h3>19</h3>
+                        </div>
+                        <div class="hour">
+                            <p>Das 13h00 às 14h30</p>
+                        </div>
+                        <div class="who">
+                            <img src="/images/small_picture.svg"alt="">
+                            <p>Gabriel Almeida</p>
+                        </div>
+                    </div>
+                    
                 </div>
                 <div class="down__mentorado">
 
@@ -100,27 +116,134 @@
                             <p>Gabriel Almeida</p>
                         </div>
                     </div>
+
+                    <div class="card">
+                        <div class="date">
+                            <p>Dia</p>
+                            <h3>19</h3>
+                        </div>
+                        <div class="hour">
+                            <p>Das 13h00 às 14h30</p>
+                        </div>
+                        <div class="who">
+                            <img src="/images/small_picture.svg" alt="">
+                            <p>Gabriel Almeida</p>
+                        </div>
+                    </div>
+
                 </div>
+
+
+
+
+
+
+                
             </div>
         </div>
     </main>
 
     <section class="right">
+
         <div class="right__container">
             <h2>Notificações</h2>
+            
             <div class="pop">
-                <img src="/images/pop_picture.svg" alt="">
-                <div class="pop__text">
-                    <h3>Anderson Busdek</h3>
-                    <p>Lorem ipsun santi avec tude proc van...</p>
+                <div class="icon__answer">
+                    <img src="/images/pergunta.svg" alt="">
                 </div>
+                <div class="pop__alert">
+                    <div class="alert__userandtime">
+                        <h3>Gustavo Amorim</h3>
+                        <p>11h30</p>
+                    </div>
+                    <p>Respondeu a sua pergunta!! ;)</p>
+                </div>
+                <a id="pop1" class="button">Ver</a>
+            </div>
+
+            <div class="pop">
+                <div class="icon__question">
+                    <img src="/images/resposta.svg" alt="">
+                </div>
+                <div class="pop__alert">
+                    <div class="alert__userandtime">
+                        <h3>Victória Ramos</h3>
+                        <p>11h30</p>
+                    </div>
+                    <p>Te fez uma pergunta!!</p>
+                </div>
+                <a id="pop2" class="button">Ver</a>
+            </div>
+
+           
+            <div class="pop">
+                <div class="icon__question">
+                    <img src="/images/resposta.svg" alt="">
+                </div>
+                <div class="pop__alert">
+                    <div class="alert__userandtime">
+                        <h3>Ana Beatriz</h3>
+                        <p>11h30</p>
+                    </div>
+                    <p>Te fez uma pergunta!!</p>
+                </div>
+                <a id="pop3" class="button">Ver</a>
+            </div>
+
+            <div class="pop">
+                <div class="icon__answer">
+                    <img src="/images/pergunta.svg" alt="">
+                </div>
+                <div class="pop__alert">
+                    <div class="alert__userandtime">
+                        <h3>Samuel Farias</h3>
+                        <p>11h30</p>
+                    </div>
+                    <p>Respondeu a sua pergunta!! ;)</p>
+                </div>
+                <a id="pop4" class="button">Ver</a>
+            </div>
+
+            
+        </div>
+
+
+    </section>
+
+<!----- MODAL ------>
+<div id="modal__Pergunta" class="modal-wrapper__pergunta ">
+    <div class="modal__pergunta">
+        <div class="pergunta__header">
+            <p>Pergunta de Maria - Enviada 12/04</p>
+        </div>
+        <div class="pergunta__body">
+            <div class="body__who">
+                <img src="/images/maria.svg" alt="">
+                <p>13:00</p>
+            </div>
+            <div class="body__text">
+                At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque cor vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corvero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corvero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corvero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque cor.
             </div>
         </div>
-    </section>
+        <form action="">
+            <textarea name="" id="" cols="30" rows="10"></textarea>
+            <div class="body__buttons">
+                <p class="button__cancelar">Cancelar</p>
+                <p class="button__enviar">Enviar</p>
+            </div>
+        </form>
+        
+
+    </div>
+</div>
+
+
 
 </body>
 
 <script src="/scripts/pesquisa.js"></script>
+<script src="/scripts/home.js"></script>
 
 <script>
     let userData = {}
