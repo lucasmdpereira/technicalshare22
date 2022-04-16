@@ -65,9 +65,7 @@
 
 <p> Acesse localhost:4000 no navegador, e faça login com um dos usuários pré-cadastrados conforme figura abaixo:<p>
 
-
-
-
+![image](https://user-images.githubusercontent.com/73071973/163655739-37aac0b6-d1cb-4597-b3a1-085510c87154.png)
 
 <h3>📅🪲 # Features e BugFix</h3>
 <ul>
