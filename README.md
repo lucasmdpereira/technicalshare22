@@ -7,14 +7,14 @@
 <p>Para o MVP somente a pesquisa está 100% disponível e funcional, o restante da aplicação roda apenas no Frontend para validação</p>
 
 <h3>Sumário<h3>
-🛠️ [Tecnologias e ferramentas](#-tecnologias-e-ferramentas)<br>
-💾 [Node Modules](#-node-modules)<br>
-🏆 [Conquistas e desafios encontrados](#-conquistas-e-desafios-encontrados)<br>
-⚙️ [Como executar](#-como-executar)<br>
-📅🪲 [Features e BugFix](#-features-e-bugfix)<br>
+🛠️ Tecnologias e ferramentas<br>
+💾 Node Modules<br>
+🏆 Conquistas e desafios encontrados<br>
+⚙️ Como executar<br>
+📅🪲 Features e BugFix<br>
 
 
-<h3>🛠️ # Tecnologias e ferramentas</h3>
+<h3>🛠️ Tecnologias e ferramentas</h3>
 <ul>
   <li>VS Code;</li>
   <li>GitFlow;</li>
@@ -30,7 +30,7 @@
   <li>BootStrap.</li>
 </ul> 
 
-<h3>💾 # Node Modules</h3>
+<h3>💾 Node Modules</h3>
 <ul>
   <li>ejs;</li>
   <li>express;</li>
@@ -41,7 +41,7 @@
   <li>nodemon (devDependencie).</li>
 </ul> 
 
-<h3>🏆 # Conquistas e desafios encontrados</h3>
+<h3>🏆 Conquistas e desafios encontrados</h3>
 <ul>
   <li>Frontend e Backend desenvolvido ao longo de 15 dias</li>
   <li>Devido a erro na distribuição dos times, esse projeto foi inteiramente desenvolvido por 3 UXs e somente 1 DEV (as equipes foram divididas em 4 ou 5 devs)</li>
@@ -50,24 +50,24 @@
   <li>Backend para barra de pesquisa inteligente finalizado. A pesquisa é capaz de encontrar nomes, cargos ou tag, inclusive pesquisando mais de um termo. Por ex: ```node moraes ux``` ira localizar todas as pessoas que possuem node como tag, mais todas as pessoas que tenham moraes no nome acrescida de todas as pessoas que possuam o cargo UX.</li>
 </ul>
 
-<h3>⚙️ # Como executar<h3>
+<h3>⚙️ Como executar</h3>
 <p>Primeiro certifique-se de utilizar a versão 16.14.2 ou superior do Node.js</p>
 
-<p>Existem duas maneiras para rodar a aplicação, a primeira é apenas acessar a aplicação na nuvem da AWS pelo link: [Clicando AQUI!] (http://ec2-54-94-214-198.sa-east-1.compute.amazonaws.com/)</p>
+<p>Existem duas maneiras para rodar a aplicação, a primeira é apenas acessar a aplicação na nuvem da AWS pelo link: http://ec2-54-94-214-198.sa-east-1.compute.amazonaws.com/
 <p> Caso o servidor esteja indisponível:</p>
 <ul>
-  <li> ´´´$ git clone https://github.com/lucasmdpereira/technicalshare22.git```</li>
-  <li> ```$ cd technicalshare22```</li>
-  <li> ```$ npm run install```</li>
-  <li> ```$ npm run dbinit```</li>
-  <li> ```$ npm start```</li>
-<ul>
+  <li> $ git clone https://github.com/lucasmdpereira/technicalshare22.git</li>
+  <li> $ cd technicalshare22</li>
+  <li> $ npm run install</li>
+  <li> $ npm run dbinit</li>
+  <li> $ npm start</li>
+</ul>
 
-<p> Acesse localhost:4000 no navegador, e faça login com um dos usuários pré-cadastrados conforme figura abaixo:<p>
+<p> Acesse localhost:4000 no navegador, e faça login com um dos usuários pré-cadastrados conforme figura abaixo:</p>
 
 ![image](https://user-images.githubusercontent.com/73071973/163655739-37aac0b6-d1cb-4597-b3a1-085510c87154.png)
 
-<h3>📅🪲 # Features e BugFix</h3>
+<h3>📅 Features e 🪲 BugFix</h3>
 <ul>
   <li>🪲 Para alguns dispositivos, a barra lateral não completa até o final da tela, isso ocorre principalmente em celulares</li>
   <li>🪲 Para alguns dispositivos, o modal de enviar mensagem não respeita as margens estabelecidas, isso ocorre principalmente com dispositivos da apple utilizando o safari</li>
@@ -77,6 +77,7 @@
   <li>📅 Testes de integração utilizando JavaScrip</li>
   <li>📅 Montar as páginas de Perfil do usuário e demais usuários dinâmicamente, buscando os dados no banco de dados</li>
   <li>📅 Trocar o banco de dados para PostgreSQL🐘 serveless</li>
+</ul>
 
 
 <h3>📝 # Licenca</h3>
