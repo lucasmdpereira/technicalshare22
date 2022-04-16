@@ -5,7 +5,7 @@
   "main": "./src/server.js",
   "scripts": {
     "start": "nodemon ./src/server.js",
-    "init": "npm i ejs express multer sequelize sqlite3 & rm ./src/db/db.sqlite & node ./src/db/createUsersDB.js",
+    "install": "npm i ejs express multer sequelize sqlite3",
     "dbinit": "rm ./src/db/db.sqlite & node ./src/db/createUsersDB.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
