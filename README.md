@@ -7,11 +7,11 @@
 <p>Para o MVP somente a pesquisa está 100% disponível e funcional, o restante da aplicação roda apenas no Frontend para validação</p>
 
 <h3>Sumário<h3>
-🛠️ [Tecnologias e ferramentas](#-tecnologias-e-ferramentas)</li>
-💾 [Node Modules](#-node-modules)</li>
-🏆 [Conquistas e desafios encontrados](#-conquistas-e-desafios-encontrados)</li>
-⚙️ [Como executar](#-como-executar)</li>
-📅🪲 [Features e BugFix](#-features-e-bugfix)</li>
+🛠️ [Tecnologias e ferramentas](#-tecnologias-e-ferramentas)<br>
+💾 [Node Modules](#-node-modules)<br>
+🏆 [Conquistas e desafios encontrados](#-conquistas-e-desafios-encontrados)<br>
+⚙️ [Como executar](#-como-executar)<br>
+📅🪲 [Features e BugFix](#-features-e-bugfix)<br>
 
 
 <h3>🛠️ # Tecnologias e ferramentas</h3>
