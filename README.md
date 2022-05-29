@@ -44,7 +44,6 @@
 <h3>🏆 Conquistas e desafios encontrados</h3>
 <ul>
   <li>Frontend e Backend desenvolvido ao longo de 15 dias</li>
-  <li>Devido a erro na distribuição dos times, esse projeto foi inteiramente desenvolvido por 3 UXs e somente 1 DEV (as equipes foram divididas em 4 ou 5 devs)</li>
   <li>Uso de metodologias ágeis e sprints</li>
   <li>Frontend finalizado</li>
   <li>Backend para barra de pesquisa inteligente finalizado. A pesquisa é capaz de encontrar nomes, cargos ou tag, inclusive pesquisando mais de um termo. Por ex: ```node moraes ux``` ira localizar todas as pessoas que possuem node como tag, mais todas as pessoas que tenham moraes no nome acrescida de todas as pessoas que possuam o cargo UX.</li>
@@ -53,8 +52,6 @@
 <h3>⚙️ Como executar</h3>
 <p>Primeiro certifique-se de utilizar a versão 16.14.2 ou superior do Node.js</p>
 
-<p>Existem duas maneiras para rodar a aplicação, a primeira é apenas acessar a aplicação na nuvem da AWS pelo link: http://ec2-54-94-214-198.sa-east-1.compute.amazonaws.com/
-<p> Caso o servidor esteja indisponível:</p>
 <ul>
   <li> $ git clone https://github.com/lucasmdpereira/technicalshare22.git</li>
   <li> $ cd technicalshare22</li>
