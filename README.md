@@ -1,6 +1,6 @@
 <h2>Programa de formação FCamara - Season 3 - Abril/2022</h2>
 
-<p>Esse repositório contém o **MVP** desenvolvido durante os dias 01/04/2022 e 15/04/2022 para o processo seletivo da FCamara. A aplicação é um MVP desenvolvido por candidatos a trainee e pode conter bugs 🪲 e necessidade de inclusão de novas features 📅</p>
+<p>Esse repositório contém o MVP desenvolvido durante os dias 01/04/2022 e 15/04/2022 para o processo seletivo da FCamara. A aplicação é um MVP desenvolvido por candidatos a trainee e pode conter bugs 🪲 e necessidade de inclusão de novas features 📅</p>
 
 <p>TechnicalShare é uma ferramenta que permite profissionais da FCamara se conectarem e trocarem experiências. Utilizando uma barra de pesquisa inteligente é possível filtrar, encontrar e se conectar a profissionais de diferentes áreas  e níveis de conhecimento</p>
 
